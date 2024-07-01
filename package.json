@@ -1,0 +1,14 @@
+{
+  "name": "@lite-ui/core",
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "release": "bumpp -r"
+  },
+  "devDependencies": {
+    "@antzy/eslint-config": "^3.3.2",
+    "bumpp": "^9.4.1",
+    "eslint": "^9.5.0",
+    "typescript": "^5.2.2"
+  }
+}

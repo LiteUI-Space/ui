@@ -1,0 +1,30 @@
+{
+  "name": "@lite-ui/button",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "button components",
+  "author": "AntzyMo <mozbano@163.com>",
+  "license": "MIT",
+  "keywords": [],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/tsconfig": "^0.5.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1",
+    "vue": "^3.4.30"
+  }
+}
