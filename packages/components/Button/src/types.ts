@@ -1,7 +1,7 @@
 import type { Button } from '.'
 
 export interface ButtonProps {
-  name: string
+  type: 'text' | 'link' | 'dashed' | 'primary' | 'default'
 }
 
 export type ButtonInstance = InstanceType<typeof Button>

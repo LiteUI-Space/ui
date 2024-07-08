@@ -1,8 +1,10 @@
 {
-  "name": "@lite-ui/core",
+  "name": "lite-ui",
   "type": "module",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
+    "play": "pnpm run -C playground dev",
     "release": "bumpp -r"
   },
   "devDependencies": {

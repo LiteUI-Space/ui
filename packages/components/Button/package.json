@@ -5,18 +5,22 @@
   "description": "button components",
   "author": "AntzyMo <mozbano@163.com>",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["vue3", "component", "unocss"],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
+      "import": "./src/index.ts",
       "require": "./dist/index.cjs"
     }
   },
-  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "src/index.ts",
   "types": "dist/index.d.ts",
+  "files": ["README.md", "dist", "package.json"],
   "scripts": {
-    "dev": "vite",
+    "dev": "vite build -w",
     "build": "vite build"
   },
   "devDependencies": {
