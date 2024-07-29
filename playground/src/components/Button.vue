@@ -1,25 +1,115 @@
 <script setup lang="ts">
-  import 'virtual:uno.css'
   import { Button } from '@lite-ui/button'
 </script>
 
 <template>
-  <div flex="~ gap-2 justify-center" class=" ">
-    <Button>
-      button
-    </Button>
-    <Button>
-      button components
-    </Button>
-    <Button type="text">
-      button text
-    </Button>
-    <Button type="primary">
-      button primary
-    </Button>
-    <Button type="link">
-      button link
-    </Button>
+  <div>
+    <h1 ml-60>
+      Type
+    </h1>
+    <div flex="~ gap-2 justify-center">
+      <Button>
+        button
+      </Button>
+      <Button type="text">
+        button text
+      </Button>
+      <Button type="primary">
+        button primary
+      </Button>
+      <Button type="link">
+        button link
+      </Button>
+    </div>
+  </div>
+  <div>
+    <h1 ml-60>
+      Disabled
+    </h1>
+    <div flex="~ gap-2 justify-center">
+      <Button disabled>
+        button
+      </Button>
+      <Button type="text" disabled>
+        button text
+      </Button>
+      <Button type="primary" disabled>
+        button primary
+      </Button>
+      <Button type="link" disabled>
+        button link
+      </Button>
+    </div>
+  </div>
+  <div>
+    <h1 ml-60>
+      Danger
+    </h1>
+    <div flex="~ gap-2 justify-center">
+      <Button danger>
+        button
+      </Button>
+      <Button type="text" danger>
+        button text
+      </Button>
+      <Button type="primary" danger>
+        button primary
+      </Button>
+      <Button type="link" danger>
+        button link
+      </Button>
+    </div>
+  </div>
+  <div>
+    <h1 ml-60>
+      Block
+    </h1>
+    <div flex="~ gap-2 col justify-center">
+      <Button danger>
+        button
+      </Button>
+      <Button type="text" danger>
+        button text
+      </Button>
+      <Button type="primary" danger>
+        button primary
+      </Button>
+      <Button type="link" danger>
+        button link
+      </Button>
+    </div>
+  </div>
+
+  <div>
+    <h1 ml-60>
+      Icon
+    </h1>
+    <div flex="~ gap-2 justify-center">
+      <Button icon="i-carbon:search">
+        button
+      </Button>
+      <Button type="text" icon="i-carbon:search">
+        button text
+      </Button>
+      <Button
+        type="primary"
+        icon="i-carbon:email"
+        danger
+        icon-position="end"
+      >
+        button primary
+      </Button>
+      <Button type="link" icon="i-carbon:search" danger>
+        button link
+      </Button>
+      <Button type="primary" icon="i-carbon:search" danger />
+      <Button
+        type="primary"
+        icon="i-carbon:search"
+        danger
+        circle
+      />
+    </div>
   </div>
 </template>
 

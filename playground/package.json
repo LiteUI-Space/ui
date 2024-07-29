@@ -15,6 +15,7 @@
     "vue": "^3.4.29"
   },
   "devDependencies": {
+    "@iconify-json/carbon": "^1.1.36",
     "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",

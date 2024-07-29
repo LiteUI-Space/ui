@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "play": "pnpm run -C playground dev",
-    "release": "bumpp -r"
+    "release": "bumpp -r",
+    "dev": "vite build"
   },
   "devDependencies": {
     "@antzy/eslint-config": "^3.3.2",

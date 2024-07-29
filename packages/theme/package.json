@@ -7,17 +7,11 @@
   "license": "MIT",
   "keywords": [
     "unocss",
-    "unocss-preset"
+    "unocss-preset",
+    "lite-ui"
   ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -26,13 +20,13 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "tsup --watch",
-    "build": "tsup"
+    "dev": "unbuild --stub",
+    "build": "unbuild"
   },
   "dependencies": {
     "unocss": "^0.61.0"
   },
   "devDependencies": {
-    "tsup": "^8.1.0"
+    "unbuild": "^2.0.0"
   }
 }
