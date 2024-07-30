@@ -8,7 +8,7 @@ export const presetLite = definePreset((options?: ThemeOptions) => {
     name: '@lite-ui/theme',
     shortcuts: [
       {
-        'lt-button': 'px-2 py-1.5 bg-transparent border-none cursor-pointer rounded-md transition text-gray-900',
+        'lt-button': 'px-2 py-1.5 flex-center bg-transparent border-none cursor-pointer rounded-md transition text-gray-900',
         // button type
         'lt-button--default': 'border border-solid border-gray-200 hover:bg-gray-50 active:bg-gray-100',
         'lt-button--text': 'hover:bg-gray-100/80 active:bg-gray-200/80',
@@ -25,9 +25,11 @@ export const presetLite = definePreset((options?: ThemeOptions) => {
         'lt-button--block': 'block w-full',
         // button icon
         'lt-button--icon': 'text-base',
+        'lt-button--icon-gap': 'gap-1.5',
         'lt-button--icon-end': 'flex-row-reverse',
         // button circle
-        'lt-button--circle': 'rounded-full'
+        'lt-button--circle': 'rounded-full',
+        'lt-button--two-cn-chars': 'tracking-2 indent-2'
       },
 
       ['flex-center', 'flex items-center justify-center']
@@ -46,7 +48,9 @@ export const presetLite = definePreset((options?: ThemeOptions) => {
       'lt-button--text-danger',
       'lt-button--primary-danger',
       'lt-button--link-danger',
-      'lt-button--block'
+      'lt-button--block',
+      'lt-button--two-chinese-chars',
+      'lt-button--icon-gap'
     ]
   }
 })

@@ -8,6 +8,7 @@ export interface ButtonProps {
   icon?: string
   iconPosition?: 'start' | 'end'
   circle?: boolean
+  autoInsertSpace?: boolean
 }
 
 export type ButtonInstance = InstanceType<typeof Button>

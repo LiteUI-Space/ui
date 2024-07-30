@@ -111,6 +111,37 @@
       />
     </div>
   </div>
+
+  <div>
+    <h1 ml-60>
+      Two-chinese-chars
+    </h1>
+    <div flex="~ gap-2 justify-center">
+      <Button auto-insert-space>
+        取消
+      </Button>
+
+      <Button
+        type="primary"
+        auto-insert-space
+      >
+        确认
+      </Button>
+      <Button
+        type="primary"
+      >
+        确认了吗?
+      </Button>
+      <Button
+        type="primary"
+      >
+        <div>
+          <span>span</span>
+          <span>test</span>
+        </div>
+      </Button>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>

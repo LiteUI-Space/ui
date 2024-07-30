@@ -9,33 +9,46 @@
 
   const props = withDefaults(defineProps<ButtonProps>(), {
     type: 'default',
-    iconPosition: 'start'
+    iconPosition: 'start',
+    autoInsertSpace: true
   })
-  console.log('props', props)
+
+  const slots = defineSlots()
+
+  // add space between two characters in Chinese
+  function isTwoCNChar() {
+    const defaultSlot = slots.default?.()
+    if (
+      defaultSlot?.length === 1
+      && typeof defaultSlot[0].children === 'string'
+    ) {
+      const childrenText = defaultSlot[0].children.trim()
+      const rexTwocn = /^[\u4E00-\u9FA5]{2}$/
+      if (rexTwocn.test(childrenText))
+        return true
+    }
+    return false
+  }
 
   const cls = computed(() => [
     {
       'lt-button--disabled': props.disabled,
       'lt-button--block': props.block,
       'lt-button--icon-end': props.iconPosition === 'end',
-      'lt-button--circle': props.circle
+      'lt-button--circle': props.circle,
+      'lt-button--icon-gap': props.icon,
+      'lt-button--two-cn-chars': props.autoInsertSpace && isTwoCNChar()
     },
     props.type ? `lt-button--${props.type}` : '',
     props.danger ? `lt-button--${props.type}-danger` : ''
-
   ])
-
-  function handleClick() {
-    console.log('click')
-  }
 </script>
 
 <template>
   <button
-    class="lt-button flex-center gap-1.5"
+    class="lt-button"
     :class="cls"
     :disabled="props.disabled"
-    @click="handleClick"
   >
     <span v-if="props.icon" class="lt-button--icon" :class="[props.icon]" />
     <slot />
