@@ -36,7 +36,7 @@
       'lt-button--block': props.block,
       'lt-button--icon-end': props.iconPosition === 'end',
       'lt-button--circle': props.circle,
-      'lt-button--icon-gap': props.icon,
+      'lt-button--icon-gap': props.icon || slots.icon,
       'lt-button--two-cn-chars': props.autoInsertSpace && isTwoCNChar()
     },
     props.type ? `lt-button--${props.type}` : '',
@@ -50,7 +50,9 @@
     :class="cls"
     :disabled="props.disabled"
   >
-    <span v-if="props.icon" class="lt-button--icon" :class="[props.icon]" />
+    <slot name="icon">
+      <span v-if="props.icon" class="lt-button--icon" :class="[props.icon]" />
+    </slot>
     <slot />
   </button>
 </template>
