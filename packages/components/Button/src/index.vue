@@ -48,10 +48,10 @@
   <button
     class="lt-button"
     :class="cls"
-    :disabled="props.disabled"
+    :disabled="disabled"
   >
     <slot name="icon">
-      <span v-if="props.icon" class="lt-button--icon" :class="[props.icon]" />
+      <span v-if="icon" class="lt-button--icon" :class="[icon]" />
     </slot>
     <slot />
   </button>
