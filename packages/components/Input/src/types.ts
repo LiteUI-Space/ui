@@ -1,13 +1,14 @@
-import type { Input } from '.'
-
-export interface InputProps {
-  placeholder?: string
-  prefix?: string
-  suffix?: string
-  addonBefore?: string
-  addonAfter?: string
-  disabled?: boolean
-  password?: boolean
+export interface LtInputProps {
+  placeholder: string
+  prefix: string
+  suffix: string
+  addonBefore: string
+  addonAfter: string
+  disabled: boolean
+  password: boolean
 }
 
-export type ButtonInstance = InstanceType<typeof Input>
+export type InputProps = Partial<LtInputProps>
+
+export type InputInstance = InstanceType<typeof import('./Input.vue')['default']>
+export type InputPasswordInstance = InstanceType<typeof import('./InputPassword.vue')['default']>
