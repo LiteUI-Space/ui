@@ -32,7 +32,39 @@ export const presetLite = definePreset((options?: ThemeOptions) => {
         'lt-button--two-cn-chars': 'tracking-2 indent-2'
       },
 
-      ['flex-center', 'flex items-center justify-center']
+      {
+        'lt-input': 'inline-flex-center',
+        'lt-input-wrapper': 'flex gap-1 items-center px-2 py-1 rounded-md lt-input-border lt-input--focus',
+        'lt-input-inner': 'outline-none border-none text-sm w-full placeholder:text-zinc-400',
+        'lt-input-border': 'border border-solid border-gray-200 transition ',
+
+        'lt-input--full': 'w-full',
+        // input hover
+        'lt-input--hover': 'hover:border-gray-300',
+        // input focus
+        'lt-input--focus': 'focus-within:border-gray-500!',
+        // input prefix
+        'lt-input--prefix-suffix-icon': 'text-lg text-zinc-500',
+        'lt-input--prefix-suffix': 'text-sm text-zinc-500',
+        // input addon
+        'lt-input--addon': 'lt-input-border px-2 py-1 bg-zinc-100',
+        'lt-input--addon-text': 'text-sm text-zinc-500',
+        // input addonBefore
+        'lt-input--addonBefore': 'lt-input--addon border-r-none rounded-l-md',
+        'lt-input-wrapper--addonBefore': 'rounded-l-none',
+        // input addonAfter
+        'lt-input--addonAfter': 'lt-input--addon border-l-none rounded-r-md',
+        'lt-input-wrapper--addonAfter': 'rounded-r-none',
+        // input disabled
+        'lt-input--disabled': 'cursor-not-allowed bg-zinc-100',
+        // input password
+        'lt-input--password': 'tracking-wider',
+        // inputPassowrd
+        'lt-input-password': 'lt-input--prefix-suffix transition block cursor-pointer hover:text-zinc-600'
+      },
+
+      ['flex-center', 'flex items-center justify-center'],
+      ['inline-flex-center', 'inline-flex items-center justify-center']
 
     ],
     safelist: [
@@ -50,7 +82,8 @@ export const presetLite = definePreset((options?: ThemeOptions) => {
       'lt-button--link-danger',
       'lt-button--block',
       'lt-button--two-chinese-chars',
-      'lt-button--icon-gap'
+      'lt-button--icon-gap',
+      'inline-flex-center'
     ]
   }
 })

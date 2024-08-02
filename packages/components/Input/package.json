@@ -1,0 +1,31 @@
+{
+  "name": "@lite-ui/input",
+  "type": "module",
+  "version": "0.0.0",
+  "keywords": ["vue3", "component", "unocss"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./src/index.ts",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "files": ["README.md", "dist", "package.json"],
+  "scripts": {
+    "dev": "vite build -w",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/tsconfig": "^0.5.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1",
+    "vue": "^3.4.30"
+  }
+}

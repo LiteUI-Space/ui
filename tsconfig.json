@@ -7,7 +7,6 @@
     "resolveJsonModule": true,
     "strict": true,
     "downlevelIteration": true,
-    "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "skipLibCheck": true
   }
