@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { computed } from 'vue'
-  import { Input } from '@lite-ui/input'
+  import Input from './Input.vue'
 
   defineOptions({
     name: 'LtInputPassword'
