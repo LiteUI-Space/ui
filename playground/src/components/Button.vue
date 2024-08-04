@@ -1,6 +1,6 @@
 <script setup lang="ts">
+  import { Button } from '@lite-ui/ui'
   import DemoBlock from './DemoBlock.vue'
-  import { Button } from '@lite-ui/button'
 </script>
 
 <template>

@@ -1,3 +1,3 @@
 export { default as Input } from './Input.vue'
 export { default as InputPassword } from './InputPassword.vue'
-export * from './types'
+export type * from './types'

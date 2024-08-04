@@ -9,9 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@lite-ui/button": "workspace:^",
-    "@lite-ui/input": "workspace:^",
-    "@lite-ui/theme": "workspace:^",
+    "@lite-ui/ui": "workspace:*",
     "unocss": "^0.61.0",
     "vue": "^3.4.29"
   },

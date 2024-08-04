@@ -1,5 +1,6 @@
 // uno.config.ts
 import { presetLite } from '@lite-ui/theme'
+
 import {
   defineConfig,
   presetAttributify,

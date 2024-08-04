@@ -1,17 +1,54 @@
 {
-  "name": "lite-ui",
+  "name": "@lite-ui/ui",
   "type": "module",
   "version": "0.0.0",
-  "private": true,
+  "description": "A Vue3 based UnoCSS UI library.",
+  "author": "AntzyMo <mozbano@163.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/LiteUI-Space/Lite-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiteUI-Space/Lite-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LiteUI-Space/Lite-ui/issues"
+  },
+  "keywords": [
+    "vue3",
+    "ccomponent",
+    "unocss"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./theme": {
+      "types": "./theme/dist/index.d.ts",
+      "default": "./theme/dist/index.mjs"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "play": "pnpm run -C playground dev",
     "release": "bumpp -r",
-    "dev": "vite build"
+    "build": "tsup --config tsup.config.ts"
+  },
+  "dependencies": {
+    "@lite-ui/button": "workspace:*",
+    "@lite-ui/input": "workspace:*",
+    "@lite-ui/theme": "workspace:*"
   },
   "devDependencies": {
     "@antzy/eslint-config": "^3.3.2",
     "bumpp": "^9.4.1",
     "eslint": "^9.5.0",
+    "tsup": "^8.2.4",
     "typescript": "^5.2.2"
   }
 }

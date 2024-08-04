@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  import { Button } from '@lite-ui/button'
-  import { Input, InputPassword } from '@lite-ui/input'
+  import { Button, Input, InputPassword } from '@lite-ui/ui'
 
   import DemoBlock from './DemoBlock.vue'
 
