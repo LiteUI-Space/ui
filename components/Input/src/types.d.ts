@@ -6,6 +6,7 @@ export interface LtInputProps {
   addonAfter: string
   disabled: boolean
   password: boolean
+  clearable: boolean
 }
 
 export type InputProps = Partial<LtInputProps>

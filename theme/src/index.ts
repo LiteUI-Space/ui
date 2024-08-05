@@ -34,15 +34,14 @@ export const presetLite = definePreset((options?: ThemeOptions) => {
 
       {
         'lt-input': 'inline-flex-center',
-        'lt-input-wrapper': 'flex gap-1 items-center px-2 py-1 rounded-md lt-input-border lt-input--focus',
+        'lt-input-wrapper': 'flex w-full gap-1 items-center px-2 py-1 rounded-md lt-input-border lt-input--focus',
         'lt-input-inner': 'outline-none border-none text-sm w-full placeholder:text-zinc-400',
         'lt-input-border': 'border border-solid border-gray-200 transition ',
 
-        'lt-input--full': 'w-full',
         // input hover
         'lt-input--hover': 'hover:border-gray-300',
         // input focus
-        'lt-input--focus': 'focus-within:border-gray-500!',
+        'lt-input--focus': 'border-gray-500! focus-within:border-gray-500!',
         // input prefix
         'lt-input--prefix-suffix-icon': 'text-lg text-zinc-500',
         'lt-input--prefix-suffix': 'text-sm text-zinc-500',
@@ -59,6 +58,9 @@ export const presetLite = definePreset((options?: ThemeOptions) => {
         'lt-input--disabled': 'cursor-not-allowed bg-zinc-100',
         // input password
         'lt-input--password': 'tracking-wider',
+        // input clearable
+        'lt-input--clearable': 'lt-input--prefix-suffix i-carbon:close-outline cursor-pointer hover:text-zinc-600 transition',
+
         // inputPassowrd
         'lt-input-password': 'lt-input--prefix-suffix transition block cursor-pointer hover:text-zinc-600'
       },

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
   import { Button, Input, InputPassword } from '@lite-ui/ui'
 
+  import { ref } from 'vue'
   import DemoBlock from './DemoBlock.vue'
 
   const password = ref('123')
@@ -11,6 +11,9 @@
     console.log('data', data)
   }
   const visible = ref(true)
+  function handleClearable() {
+    console.log('clear')
+  }
 </script>
 
 <template>
@@ -54,7 +57,7 @@
     <Input disabled addon-before="http://" placeholder="default size" />
   </DemoBlock>
 
-  <DemoBlock title="Password " col>
+  <DemoBlock title="Password" col>
     <Input v-model="password" placeholder="Disabled" :password="isPasssword" />
     <div class="flex-center gap-1">
       <InputPassword v-model:visible="visible" @change="handleChange">
@@ -66,5 +69,14 @@
         {{ visible }}
       </Button>
     </div>
+  </DemoBlock>
+
+  <DemoBlock title="Clearable" col>
+    <Input
+      w-200px
+      clearable
+      placeholder="Disabled"
+      @clear="handleClearable"
+    />
   </DemoBlock>
 </template>

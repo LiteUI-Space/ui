@@ -1,14 +1,21 @@
 <script setup lang="ts">
   import type { InputProps } from './types'
 
-  import { computed } from 'vue'
+  import { computed, ref } from 'vue'
 
   defineOptions({
     name: 'LtInput'
   })
 
   const props = defineProps<InputProps>()
+  const emit = defineEmits<{
+    clear: []
+    focus: []
+    blur: []
+  }>()
+
   const slots = defineSlots()
+  const inputRef = ref<HTMLInputElement | null>()
 
   const ICON_PREFIX = 'i-'
 
@@ -26,10 +33,26 @@
   ])
 
   const modelValue = defineModel({ default: '' })
+
+  // TODO: 清除后保留选中的样式并聚焦
+  function handleClearable() {
+    modelValue.value = ''
+    emit('clear')
+  }
+
+  function focus() {
+    inputRef.value?.focus()
+  }
+
+  function blur() {
+    inputRef.value?.blur()
+  }
+
+  defineExpose({ focus, blur })
 </script>
 
 <template>
-  <div class="lt-input ">
+  <div class="lt-input">
     <span
       v-if="isAddonBefore"
       class="lt-input--addonBefore"
@@ -55,7 +78,9 @@
       <span v-else-if="prefix" class="lt-input--prefix-suffix">{{ prefix }}</span>
 
       <input
-        v-model="modelValue"
+        v-bind="$attrs"
+        ref="inputRef"
+        v-model.trim="modelValue"
         class="lt-input-inner"
         :class="{
           'lt-input--disabled': disabled,
@@ -69,6 +94,7 @@
       <span v-if="$slots.suffix" class="lt-input--prefix-suffix">
         <slot name="suffix">{{ suffix }}</slot>
       </span>
+      <span v-else-if="clearable && modelValue" class="lt-input--clearable" @click="handleClearable" />
       <span v-else-if="isSuffixIcon" :class="suffix" class="lt-input--prefix-suffix-icon" />
       <span v-else-if="suffix" class="lt-input--prefix-suffix">{{ suffix }}</span>
     </div>
