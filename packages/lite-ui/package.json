@@ -1,0 +1,49 @@
+{
+  "name": "@lite-ui/ui",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "A Vue3 based UnoCSS UI library.",
+  "author": "AntzyMo <mozbano@163.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/LiteUI-Space/Lite-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiteUI-Space/Lite-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LiteUI-Space/Lite-ui/issues"
+  },
+  "keywords": [
+    "vue3",
+    "components",
+    "unocss"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.mjs"
+    },
+    "./theme": {
+      "types": "./dist/theme.d.ts",
+      "default": "./dist/theme.mjs"
+    }
+  },
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "@lite-ui/button": "workspace:*",
+    "@lite-ui/input": "workspace:*",
+    "@lite-ui/theme": "workspace:*"
+  },
+  "devDependencies": {
+    "unbuild": "^2.0.0"
+  }
+}

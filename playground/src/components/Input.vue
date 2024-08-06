@@ -1,7 +1,7 @@
 <script setup lang="ts">
+  import { ref } from 'vue'
   import { Button, Input, InputPassword, TextArea } from '@lite-ui/ui'
 
-  import { ref } from 'vue'
   import DemoBlock from './DemoBlock.vue'
 
   const password = ref('123')
