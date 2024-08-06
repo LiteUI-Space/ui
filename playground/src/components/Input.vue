@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Button, Input, InputPassword } from '@lite-ui/ui'
+  import { Button, Input, InputPassword, TextArea } from '@lite-ui/ui'
 
   import { ref } from 'vue'
   import DemoBlock from './DemoBlock.vue'
@@ -18,7 +18,7 @@
 
 <template>
   <Input placeholder="Please Input" />
-  <!-- <Input /> -->
+
   <DemoBlock title="Prefix & Suffix" col>
     <Input prefix="i-carbon:user-avatar" placeholder="default size" suffix="i-carbon:customer" />
     <Input prefix="$" placeholder="default size" suffix="rmb" />
@@ -55,6 +55,7 @@
       suffix="i-carbon:customer"
     />
     <Input disabled addon-before="http://" placeholder="default size" />
+    <TextArea disabled />
   </DemoBlock>
 
   <DemoBlock title="Password" col>
@@ -73,10 +74,17 @@
 
   <DemoBlock title="Clearable" col>
     <Input
-      w-200px
       clearable
       placeholder="Disabled"
       @clear="handleClearable"
     />
+  </DemoBlock>
+
+  <DemoBlock title="TextArea" col>
+    <TextArea />
+  </DemoBlock>
+
+  <DemoBlock title="TextArea resize " col>
+    <TextArea resize />
   </DemoBlock>
 </template>
