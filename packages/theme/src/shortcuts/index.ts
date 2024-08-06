@@ -1,5 +1,5 @@
 import { common } from './src/common'
-import { Button } from './src/button'
+import { Button } from './src/Button'
 import { InputShortcuts as Input } from './src/Input'
 
 export const shortcuts = [

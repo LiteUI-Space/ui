@@ -20,12 +20,21 @@
   ],
   "scripts": {
     "play": "pnpm run -C playground dev",
-    "release": "bumpp -r"
+    "release": "bumpp -r",
+    "comp": "esno scripts/create-component.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.2.0",
+    "ora": "^8.0.1"
   },
   "devDependencies": {
     "@antzy/eslint-config": "^3.3.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.1.0",
     "bumpp": "^9.4.1",
     "eslint": "^9.5.0",
+    "esno": "^4.7.0",
     "typescript": "^5.2.2"
   }
 }
