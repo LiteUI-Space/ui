@@ -1,4 +1,5 @@
 import ora from 'ora'
+import { $ } from 'execa'
 import chalk from 'chalk'
 import path from 'node:path'
 import fs from 'node:fs/promises'
@@ -12,12 +13,11 @@ const upperCaseCompName = compName.replace(compName[0], compName[0].toUpperCase(
 const lowerCaseCompName = compName.replace(compName[0], compName[0].toLowerCase())
 
 const _dirname = fileURLToPath(new URL('../packages', import.meta.url))
-const baseCompUrl = path.join(_dirname, 'components')
 const pkgVersion = liteuiPkg.version
-createComponent(baseCompUrl)
+createComponent()
 
 async function write(baseUrl: string, fileName: string, fileConent: string) {
-  const filePath = path.join(baseUrl, fileName)
+  const filePath = path.join(_dirname, baseUrl, fileName)
   const [, shortFilePath] = filePath.split(/packages\\/)
 
   const spinner = ora(`createing file: ${shortFilePath}`).start()
@@ -25,28 +25,32 @@ async function write(baseUrl: string, fileName: string, fileConent: string) {
   spinner.succeed(chalk.green(`file ${shortFilePath} created successfully.`))
 }
 
-async function createComponent(baseUrl: string) {
-  const files = await fs.readdir(baseUrl)
+async function createComponent() {
+  const files = await fs.readdir(path.join(_dirname, 'components'))
   if (files.includes(upperCaseCompName)) {
     console.log(chalk.red(`${compName} already exists`))
+    process.exit(1)
   } else {
-    const compDirPath = path.join(baseUrl, upperCaseCompName)
-    const srcDirPath = path.join(compDirPath, 'src')
-    const themeShortcutsDirPath = path.join(baseUrl, 'theme/shortcuts')
-    const themeShortcutsPath = path.join(themeShortcutsDirPath, 'src')
+    const compDirPath = `components/${upperCaseCompName}`
+    const compSrcDirPath = `${compDirPath}/src`
+    const themeShortcutsPath = 'theme/src/shortcuts'
+    const themeShortcutsSrcPath = 'theme/src/shortcuts/src'
 
-    await fs.mkdir(compDirPath)
-    await fs.mkdir(srcDirPath)
+    await fs.mkdir(path.join(_dirname, compDirPath))
+    await fs.mkdir(path.join(_dirname, compSrcDirPath))
     await Promise.all([
       writePkgJSON(compDirPath),
       writeTsConfig(compDirPath),
-      writeIndex(srcDirPath),
-      writeEntry(srcDirPath),
-      writeDTs(srcDirPath),
-      writeThemeShortcuts(themeShortcutsPath)
-
+      writeTsConfig(compDirPath),
+      writeIndex(compSrcDirPath),
+      writeEntry(compSrcDirPath),
+      writeDTs(compSrcDirPath),
+      writeThemeShortcuts(themeShortcutsSrcPath),
+      appendThemeShortcutsIndex(themeShortcutsPath),
+      writeLiteuiIndex(),
+      appendLiteuiDepToPkg()
     ])
-    await appendDepToPkg()
+    applyCommand()
   }
 }
 
@@ -146,16 +150,40 @@ async function writeThemeShortcuts(baseUrl: string) {
   return write(baseUrl, `${upperCaseCompName}.ts`, themeShortcutsContent)
 }
 
-// TODO: append theme shortcuts index
 async function appendThemeShortcutsIndex(baseUrl: string) {
+  const file = await fs.readFile(path.join(_dirname, baseUrl, 'index.ts'), 'utf-8')
+  const content = file.replace('export const shortcuts = [', `import { ${upperCaseCompName} } from './src/${upperCaseCompName}'\nexport const shortcuts = [`)
+    .replace(']', `,${upperCaseCompName}]`)
+  return write(baseUrl, 'index.ts', content)
 }
 
-async function appendDepToPkg() {
+async function writeLiteuiIndex() {
+  const file = await fs.readFile(path.join(_dirname, 'lite-ui/src/index.ts'), 'utf-8')
+  const content = `${file}export * from '@lite-ui/${lowerCaseCompName}'`
+  return write('lite-ui/src', 'index.ts', content)
+}
+async function appendLiteuiDepToPkg() {
   const depName = `@lite-ui/${lowerCaseCompName}`
   const pkg = { ...liteuiPkg }
 
   if (!(depName in pkg.dependencies)) {
     Object.assign(pkg.dependencies, { [depName]: 'workspace:*' })
-    write(_dirname, 'lite-ui/package.json', JSON.stringify(pkg, null, 2))
+    return write('lite-ui', 'package.json', JSON.stringify(pkg, null, 2))
   }
+}
+
+async function applyCommand() {
+  const spinners = ora('installing dependencies...').start()
+  await $`pnpm i`.catch(err => {
+    console.error(err)
+    process.exit(1)
+  })
+  spinners.succeed(chalk.green('dependencies installed successfully.'))
+
+  const lintSpinner = ora('linting...').start()
+  await $`pnpm lint:comp:fix`.catch(err => {
+    console.error(err)
+    process.exit(1)
+  })
+  lintSpinner.succeed(chalk.green('linted successfully.'))
 }
