@@ -173,17 +173,28 @@ async function appendLiteuiDepToPkg() {
 }
 
 async function applyCommand() {
-  const spinners = ora('installing dependencies...').start()
-  await $`pnpm i`.catch(err => {
-    console.error(err)
-    process.exit(1)
-  })
-  spinners.succeed(chalk.green('dependencies installed successfully.'))
+  await command(
+    'pnpm i',
+    'installing dependencies...',
+    'dependencies installed successfully.'
+  )
+  await command(
+    'pnpm lint:comp:fix',
+    'linting...',
+    'linted successfully.'
+  )
+  await command(
+    'pnpm build:liteui',
+    'building...',
+    'built successfully.'
+  )
+}
 
-  const lintSpinner = ora('linting...').start()
-  await $`pnpm lint:comp:fix`.catch(err => {
+async function command(command: string, startMsg: string, endMsg: string) {
+  const spinners = ora(startMsg).start()
+  await $`${command}`.catch(err => {
     console.error(err)
     process.exit(1)
   })
-  lintSpinner.succeed(chalk.green('linted successfully.'))
+  spinners.succeed(chalk.green(endMsg))
 }

@@ -20,7 +20,7 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "unbuild --stub",
+    "stub": "unbuild --stub",
     "build": "unbuild"
   },
   "dependencies": {
