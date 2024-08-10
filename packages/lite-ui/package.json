@@ -18,16 +18,6 @@
     "components",
     "unocss"
   ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.mjs"
-    },
-    "./theme": {
-      "types": "./dist/theme.d.ts",
-      "default": "./dist/theme.mjs"
-    }
-  },
   "main": "dist/index.mjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -39,8 +29,7 @@
   },
   "dependencies": {
     "@lite-ui/button": "workspace:*",
-    "@lite-ui/input": "workspace:*",
-    "@lite-ui/theme": "workspace:*"
+    "@lite-ui/input": "workspace:*"
   },
   "devDependencies": {
     "unbuild": "^2.0.0"
