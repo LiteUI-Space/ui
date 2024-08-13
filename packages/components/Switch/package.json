@@ -1,12 +1,12 @@
 {
-  "name": "@lite-ui/input",
+  "name": "@lite-ui/switch",
   "type": "module",
   "version": "0.0.0",
   "keywords": [
     "vue3",
     "component",
     "unocss",
-    "input"
+    "switch"
   ],
   "publishConfig": {
     "access": "public",

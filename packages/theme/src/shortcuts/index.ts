@@ -1,11 +1,13 @@
-import { common } from './src/common'
-import { Button } from './src/Button'
-import { InputShortcuts as Input } from './src/Input'
+import { common } from './common'
+import { Button } from './Button'
+import { Switch } from './Switch'
+import { InputShortcuts as Input } from './Input'
 
 export const shortcuts = [
   common,
   Button,
-  Input
+  Input,
+  Switch
 ]
 
 /**

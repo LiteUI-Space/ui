@@ -1,5 +1,5 @@
 {
-  "name": "@lite-ui/ui",
+  "name": "@lite-ui/utils",
   "type": "module",
   "version": "0.0.0",
   "description": "A Vue3 based UnoCSS UI library.",
@@ -26,12 +26,6 @@
   ],
   "scripts": {
     "build": "unbuild"
-  },
-  "dependencies": {
-    "@lite-ui/button": "workspace:*",
-    "@lite-ui/input": "workspace:*",
-    "@lite-ui/switch": "workspace:*",
-    "@lite-ui/theme": "workspace:*"
   },
   "devDependencies": {
     "unbuild": "^2.0.0"

@@ -24,6 +24,7 @@
   },
   "scripts": {
     "build:liteui": "pnpm run -C packages/lite-ui build",
+    "build:utils": "pnpm run -C packages/utils build",
     "stub:theme": "pnpm run -C packages/theme stub",
     "play": "pnpm run -C playground dev",
     "release": "bumpp -r",

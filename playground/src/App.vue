@@ -1,8 +1,9 @@
 <script setup lang="ts">
-  import Input from './components/Input.vue'
+  import Switch from './components/Switch.vue'
 </script>
 
 <template>
-  <Input />
+  <!-- <Input /> -->
   <!-- <Button /> -->
+  <Switch />
 </template>
