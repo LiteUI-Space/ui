@@ -34,7 +34,6 @@ async function createComponent() {
     const compDirPath = `components/${upperCaseCompName}`
     const compSrcDirPath = `${compDirPath}/src`
     const themeShortcutsPath = 'theme/src/shortcuts'
-    const themeShortcutsSrcPath = 'theme/src/shortcuts/src'
 
     await fs.mkdir(path.join(_dirname, compDirPath))
     await fs.mkdir(path.join(_dirname, compSrcDirPath))
@@ -45,7 +44,7 @@ async function createComponent() {
       writeIndex(compSrcDirPath),
       writeEntry(compSrcDirPath),
       writeDTs(compSrcDirPath),
-      writeThemeShortcuts(themeShortcutsSrcPath),
+      writeThemeShortcuts(themeShortcutsPath),
       appendThemeShortcutsIndex(themeShortcutsPath),
       writeLiteuiIndex(),
       appendLiteuiDepToPkg()
@@ -126,6 +125,7 @@ async function writeEntry(baseUrl: string) {
 </script>
 
 <template>
+  <div>${upperCaseCompName}</div>
 </template>
 `
   return write(baseUrl, `${upperCaseCompName}.vue`, entryContent)
@@ -152,7 +152,7 @@ async function writeThemeShortcuts(baseUrl: string) {
 
 async function appendThemeShortcutsIndex(baseUrl: string) {
   const file = await fs.readFile(path.join(_dirname, baseUrl, 'index.ts'), 'utf-8')
-  const content = file.replace('export const shortcuts = [', `import { ${upperCaseCompName} } from './src/${upperCaseCompName}'\nexport const shortcuts = [`)
+  const content = file.replace('export const shortcuts = [', `import { ${upperCaseCompName} } from './${upperCaseCompName}'\nexport const shortcuts = [`)
     .replace(']', `,${upperCaseCompName}]`)
   return write(baseUrl, 'index.ts', content)
 }
