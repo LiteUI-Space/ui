@@ -10,15 +10,10 @@
 
 <template>
   <div>
-    <h1 ml-60>
+    <h1 ml-10>
       {{ title }}
     </h1>
-    <div
-      :class="[cls, {
-        'flex-col': col,
-      }]"
-      flex="~ gap-2 justify-center"
-    >
+    <div :class="cls">
       <slot />
     </div>
   </div>

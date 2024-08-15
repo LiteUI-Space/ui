@@ -58,6 +58,21 @@ importers:
         specifier: ^3.4.30
         version: 3.4.34(typescript@5.5.2)
 
+  packages/components/Divider:
+    devDependencies:
+      '@vue/tsconfig':
+        specifier: ^0.5.1
+        version: 0.5.1
+      mkdist:
+        specifier: ^1.5.4
+        version: 1.5.4(typescript@5.5.2)(vue-tsc@2.0.22(typescript@5.5.2))
+      typescript:
+        specifier: ^5.2.2
+        version: 5.5.2
+      vue:
+        specifier: ^3.4.30
+        version: 3.4.34(typescript@5.5.2)
+
   packages/components/Input:
     dependencies:
       '@lite-ui/utils':
@@ -101,6 +116,9 @@ importers:
       '@lite-ui/button':
         specifier: workspace:*
         version: link:../components/Button
+      '@lite-ui/divider':
+        specifier: workspace:*
+        version: link:../components/Divider
       '@lite-ui/input':
         specifier: workspace:*
         version: link:../components/Input
