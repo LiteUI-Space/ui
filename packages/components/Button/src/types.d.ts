@@ -1,3 +1,5 @@
+import type { LtComponentSize } from '@lite-ui/utils'
+
 interface LtButtonProps {
   type: 'text' | 'link' | 'primary' | 'default'
   disabled: boolean
@@ -7,6 +9,7 @@ interface LtButtonProps {
   iconPosition: 'start' | 'end'
   circle: boolean
   autoInsertSpace: boolean
+  size: LtComponentSize
 }
 
 export type ButtonProps = Partial<LtButtonProps>

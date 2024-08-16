@@ -1,12 +1,21 @@
 export const Button = {
-  'lt-button': 'px-2 py-1.5 flex-center bg-transparent border-none cursor-pointer rounded-md transition text-gray-900',
+  'lt-button': 'flex-center bg-white border-none cursor-pointer rounded-md transition text-gray-900',
+  // button size
+  'lt-button-small': 'px-2 h-7 text-xs',
+  'lt-button-default': 'h-8 px-3 text-sm',
+  'lt-button-large': 'h-9 px-4 text-sm',
   // button type
-  'lt-button--default': 'border border-solid border-gray-200 hover:bg-gray-50 active:bg-gray-100',
-  'lt-button--text': 'hover:bg-gray-100/80 active:bg-gray-200/80',
-  'lt-button--primary': 'bg-black/85 text-white hover:op-90 active:op-100',
+  'lt-button--default': 'border border-solid border-gray-200',
+  'lt-button--text': '',
+  'lt-button--primary': 'bg-black/85 text-white',
   'lt-button--link': '',
+  // button hover
+  'lt-button--default-hover': 'hover:bg-gray-50',
+  'lt-button--text-hover': 'hover:bg-gray-100/80',
+  'lt-button--primary-hover': 'hover:op-90',
+  'lt-button--link-hover': 'hover:text-gray-900/80',
   // button disabled
-  'lt-button--disabled': 'cursor-not-allowed! opacity-50!',
+  'lt-button--disabled': 'cursor-not-allowed! op-80%',
   // button danger
   'lt-button--default-danger': 'text-rose-500 border-rose-500 hover:bg-red-100/60',
   'lt-button--text-danger': 'text-rose-500 hover:bg-red-100/60',
@@ -15,9 +24,12 @@ export const Button = {
   // button block
   'lt-button--block': 'block w-full',
   // button icon
-  'lt-button--icon': 'text-base',
   'lt-button--icon-gap': 'gap-1.5',
   'lt-button--icon-end': 'flex-row-reverse',
+  // button only icon
+  'lt-button-small--onlyicon': 'w-7 h-7 px-0 text-lg',
+  'lt-button-default--onlyicon': 'w-8 h-8 px-0 text-lg',
+  'lt-button-large--onlyicon': 'w-9 h-9 px-0 text-lg',
   // button circle
   'lt-button--circle': 'rounded-full',
   'lt-button--two-cn-chars': 'tracking-2 indent-2'

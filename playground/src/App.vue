@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import Drivide from './components/Drivide.vue'
+  import Button from './components/Button.vue'
 </script>
 
 <template>
   <!-- <Input /> -->
-  <!-- <Button /> -->
+  <Button />
   <!-- <Switch /> -->
-  <Drivide />
+  <!-- <Drivide /> -->
 </template>

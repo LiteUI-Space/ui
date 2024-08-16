@@ -10,7 +10,8 @@
   const props = withDefaults(defineProps<ButtonProps>(), {
     type: 'default',
     iconPosition: 'start',
-    autoInsertSpace: true
+    autoInsertSpace: true,
+    size: 'default'
   })
 
   const slots = defineSlots()
@@ -37,10 +38,13 @@
       'lt-button--icon-end': props.iconPosition === 'end',
       'lt-button--circle': props.circle,
       'lt-button--icon-gap': props.icon || slots.icon,
-      'lt-button--two-cn-chars': props.autoInsertSpace && isTwoCNChar()
+      'lt-button--two-cn-chars': !props.icon && props.autoInsertSpace && isTwoCNChar()
     },
-    props.type ? `lt-button--${props.type}` : '',
-    props.danger ? `lt-button--${props.type}-danger` : ''
+    `lt-button-${props.size}`,
+    props.type && `lt-button--${props.type}`,
+    props.disabled ? `lt-button--${props.type}-disabled` : `lt-button--${props.type}-hover`,
+    props.danger && `lt-button--${props.type}-danger`,
+    props.icon && !slots.default && `lt-button-${props.size}--onlyicon`
   ])
 </script>
 
@@ -51,7 +55,7 @@
     :disabled="disabled"
   >
     <slot name="icon">
-      <span v-if="icon" class="lt-button--icon" :class="[icon]" />
+      <span v-if="icon" :class="icon" />
     </slot>
     <slot />
   </button>

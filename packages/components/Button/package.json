@@ -25,6 +25,9 @@
   "scripts": {
     "build": "mkdist -d"
   },
+  "dependencies": {
+    "@lite-ui/utils": "workspace:*"
+  },
   "devDependencies": {
     "@vue/tsconfig": "^0.5.1",
     "mkdist": "^1.5.4",
