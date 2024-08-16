@@ -6,6 +6,7 @@ import fs from 'node:fs/promises'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 
+import { writeUnoConfig } from './generateUnoConfig'
 import liteuiPkg from '../packages/lite-ui/package.json'
 
 const compName = process.argv[2]
@@ -14,6 +15,8 @@ const lowerCaseCompName = compName.replace(compName[0], compName[0].toLowerCase(
 
 const _dirname = fileURLToPath(new URL('../packages', import.meta.url))
 const pkgVersion = liteuiPkg.version
+
+writeUnoConfig()
 createComponent()
 
 async function write(baseUrl: string, fileName: string, fileConent: string) {
