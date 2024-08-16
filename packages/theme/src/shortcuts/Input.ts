@@ -1,8 +1,12 @@
 const Input = {
-  'lt-input': 'inline-flex-center',
-  'lt-input-wrapper': 'flex w-full gap-1 items-center px-2 py-1 rounded-md lt-input-border lt-input--focus',
-  'lt-input-inner': 'outline-none border-none text-sm w-full placeholder:text-zinc-400',
+  'lt-input': 'inline-flex align-middle',
+  'lt-input-wrapper': 'flex w-full flex-1 gap-1 px-2 py-1 items-center rounded-md lt-input-border lt-input--focus',
+  'lt-input-inner': 'outline-none border-none  text-sm w-full placeholder:text-zinc-400',
   'lt-input-border': 'border border-solid border-gray-200 transition ',
+  // input size
+  'lt-input-small': 'h-7',
+  'lt-input-default': 'h-8',
+  'lt-input-large': 'h-9',
 
   // input hover
   'lt-input--hover': 'hover:border-gray-300',
@@ -12,8 +16,13 @@ const Input = {
   'lt-input--prefix-suffix-icon': 'text-lg text-zinc-500',
   'lt-input--prefix-suffix': 'text-sm text-zinc-500',
   // input addon
-  'lt-input--addon': 'lt-input-border px-2 py-1 bg-zinc-100',
-  'lt-input--addon-text': 'text-sm text-zinc-500',
+  'lt-input--addon': 'flex-center lt-input-border px-2 py-1 bg-zinc-100',
+  // input addon text size
+  'lt-input--addon-text': 'text-zinc-500',
+  'lt-input-default--addon-text': 'text-xs',
+  'lt-input-small--addon-text': 'text-xs',
+  'lt-input-large--addon-text': 'text-xs',
+
   // input addonBefore
   'lt-input--addonBefore': 'lt-input--addon border-r-none rounded-l-md',
   'lt-input-wrapper--addonBefore': 'rounded-l-none',

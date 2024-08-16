@@ -7,7 +7,9 @@
     name: 'LtInput'
   })
 
-  const props = defineProps<InputProps>()
+  const props = withDefaults(defineProps<InputProps>(), {
+    size: 'default'
+  })
   const emit = defineEmits<{
     clear: []
     focus: []
@@ -52,7 +54,7 @@
 </script>
 
 <template>
-  <div class="lt-input">
+  <div class="lt-input" :class="`lt-input-${size}`">
     <span
       v-if="isAddonBefore"
       class="lt-input--addonBefore"
@@ -60,7 +62,7 @@
         'lt-input--disabled': disabled,
       }"
     >
-      <span class="lt-input--addon-text">
+      <span class="lt-input--addon-text" :class="`lt-input-${size}--addon-text`">
         <slot name="addonBefore">
           {{ addonBefore }}
         </slot>
@@ -74,7 +76,7 @@
       <span v-if="$slots.prefix" class="lt-input--prefix-suffix">
         <slot name="prefix">{{ prefix }}</slot>
       </span>
-      <span v-else-if="isPrefixIcon" :class="prefix" class="lt-input--prefix-suffix-icon" />
+      <span v-else-if="isPrefixIcon" class="lt-input--prefix-suffix-icon" :class="prefix" />
       <span v-else-if="prefix" class="lt-input--prefix-suffix">{{ prefix }}</span>
 
       <input
@@ -95,7 +97,7 @@
         <slot name="suffix">{{ suffix }}</slot>
       </span>
       <span v-else-if="clearable && modelValue" class="lt-input--clearable" @click="handleClearable" />
-      <span v-else-if="isSuffixIcon" :class="suffix" class="lt-input--prefix-suffix-icon" />
+      <span v-else-if="isSuffixIcon" class="lt-input--prefix-suffix-icon" :class="suffix" />
       <span v-else-if="suffix" class="lt-input--prefix-suffix">{{ suffix }}</span>
     </div>
 
@@ -106,7 +108,7 @@
         'lt-input--disabled': disabled,
       }"
     >
-      <span class="lt-input--addon-text">
+      <span class="lt-input--addon-text" :class="`lt-input-${size}--addon-text`">
         <slot name="addonAfter">
           {{ addonAfter }}
         </slot>

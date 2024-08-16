@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import type { InputProps } from '@lite-ui/ui'
+
   import { ref } from 'vue'
   import { Button, Input, InputPassword, TextArea } from '@lite-ui/ui'
 
@@ -14,15 +16,60 @@
   function handleClearable() {
     console.log('clear')
   }
+
+  const sizeList: InputProps['size'][] = ['small', 'default', 'large']
+  const size = ref(sizeList[1])
 </script>
 
 <template>
-  <Input placeholder="Please Input" />
+  <div flex="~">
+    <Button
+      v-for="item in sizeList"
+      :key="item"
+      size="small"
+      @click="size = item"
+    >
+      {{ item }}
+    </Button>
+  </div>
+  <div border-b="~ solid red">
+    <Input :size="size" placeholder="Please Input" />
+    <Input :size="size" addon-before="搜索" placeholder="default size" />
+    <Input
+      :size="size"
+      prefix="i-carbon:user-avatar"
+      placeholder="default size"
+      suffix="i-carbon:customer"
+    />
+    <Input :size="size" placeholder="Please Input" />
+  </div>
 
-  <DemoBlock title="Prefix & Suffix" col>
-    <Input prefix="i-carbon:user-avatar" placeholder="default size" suffix="i-carbon:customer" />
-    <Input prefix="$" placeholder="default size" suffix="rmb" />
-    <Input placeholder="default size" suffix="rmb123">
+  <div flex="~ col">
+    <Input :size="size" placeholder="Please Input" />
+    <Input :size="size" addon-before="搜索" placeholder="default size" />
+    <Input
+      :size="size"
+      prefix="i-carbon:user-avatar"
+      placeholder="default size"
+      suffix="i-carbon:customer"
+    />
+    <Input :size="size" placeholder="Please Input" />
+  </div>
+
+  <DemoBlock title="Prefix & Suffix">
+    <Input
+      :size="size"
+      prefix="i-carbon:user-avatar"
+      placeholder="default size"
+      suffix="i-carbon:customer"
+    />
+    <Input
+      :size="size"
+      prefix="$"
+      placeholder="default size"
+      suffix="rmb"
+    />
+    <Input :size="size" placeholder="default size" suffix="rmb123">
       <template #prefix>
         <span>$</span>
       </template>
@@ -33,10 +80,15 @@
   </DemoBlock>
 
   <DemoBlock title="addonBefore & isAddonAfter" col>
-    <Input addon-before="http://" placeholder="default size" />
-    <Input addon-after=".com" placeholder="default size" />
-    <Input addon-before="http://" placeholder="default size" addon-after=".com" />
-    <Input placeholder="default size">
+    <Input :size="size" addon-before="http://" placeholder="default size" />
+    <Input :size="size" addon-after=".com" placeholder="default size" />
+    <Input
+      :size="size"
+      addon-before="http://"
+      placeholder="default size"
+      addon-after=".com"
+    />
+    <Input :size="size" placeholder="default size">
       <template #addonBefore>
         <span>http://</span>
       </template>
@@ -47,21 +99,37 @@
   </DemoBlock>
 
   <DemoBlock title="Disabled " col>
-    <Input placeholder="Disabled" disabled />
+    <Input :size="size" placeholder="Disabled" disabled />
     <Input
+      :size="size"
       disabled
       prefix="i-carbon:user-avatar"
       placeholder="default size"
       suffix="i-carbon:customer"
     />
-    <Input disabled addon-before="http://" placeholder="default size" />
+    <Input
+      :size="size"
+      disabled
+      addon-before="http://"
+      placeholder="default size"
+    />
     <TextArea disabled />
   </DemoBlock>
 
   <DemoBlock title="Password" col>
-    <Input v-model="password" placeholder="Disabled" :password="isPasssword" />
-    <div class="flex-center gap-1">
-      <InputPassword v-model:visible="visible" @change="handleChange">
+    <Input
+      v-model="password"
+      :size="size"
+      placeholder="Disabled"
+      :password="isPasssword"
+    />
+
+    <div>
+      <InputPassword
+        v-model:visible="visible"
+        :size="size"
+        @change="handleChange"
+      >
         <template #suffix>
           <span>123</span>
         </template>
@@ -74,6 +142,7 @@
 
   <DemoBlock title="Clearable" col>
     <Input
+      :size="size"
       clearable
       placeholder="Disabled"
       @clear="handleClearable"

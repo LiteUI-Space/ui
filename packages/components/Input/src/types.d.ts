@@ -1,3 +1,5 @@
+import type { LtComponentSize } from '@lite-ui/utils'
+
 export interface LtInputProps {
   placeholder: string
   prefix: string
@@ -7,11 +9,10 @@ export interface LtInputProps {
   disabled: boolean
   password: boolean
   clearable: boolean
+  size: LtComponentSize
 }
 
-export interface LtTextAreaProps {
-  placeholder: string
-  disabled: boolean
+export interface LtTextAreaProps extends Pick<LtInputProps, 'placeholder' | 'disabled' | 'clearable' | 'size'> {
   /**
    * TODO: clearable
    * @type {boolean}
