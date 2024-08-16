@@ -1,5 +1,5 @@
 export const Button = {
-  'lt-button': 'flex-center bg-white border-none cursor-pointer rounded-md transition text-gray-900',
+  'lt-button': 'inline-flex-center bg-white border-none cursor-pointer rounded-md transition text-gray-900',
   // button size
   'lt-button-small': 'px-2 h-7 text-xs',
   'lt-button-default': 'h-8 px-3 text-sm',
