@@ -1,10 +1,20 @@
 <script setup lang="ts">
-  import Input from './components/Input.vue'
+  import Space from './components/Space.vue'
+  import SizeBtns from './components/SizeBtns.vue'
+
+  import { ref, watch } from 'vue'
+
+  const size = ref('default')
+  watch(size, val => {
+    console.log('size', val)
+  })
 </script>
 
 <template>
-  <Input />
+  <SizeBtns v-model="size" />
+  <!-- <Input /> -->
   <!-- <Button /> -->
   <!-- <Switch /> -->
   <!-- <Drivide /> -->
+  <Space :size="size" />
 </template>

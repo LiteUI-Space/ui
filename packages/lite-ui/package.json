@@ -31,8 +31,10 @@
     "@lite-ui/button": "workspace:*",
     "@lite-ui/divider": "workspace:*",
     "@lite-ui/input": "workspace:*",
+    "@lite-ui/space": "workspace:*",
     "@lite-ui/switch": "workspace:*",
-    "@lite-ui/theme": "workspace:*"
+    "@lite-ui/theme": "workspace:*",
+    "@lite-ui/utils": "workspace:*"
   },
   "devDependencies": {
     "unbuild": "^2.0.0"

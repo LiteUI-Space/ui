@@ -1,3 +1,4 @@
+import { Space } from './Space'
 import { common } from './common'
 import { Button } from './Button'
 import { Switch } from './Switch'
@@ -9,7 +10,8 @@ export const shortcuts = [
   Button,
   Input,
   Switch,
-  Divider
+  Divider,
+  Space
 ]
 
 /**
