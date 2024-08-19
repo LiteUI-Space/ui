@@ -35,7 +35,7 @@
     :style="[customize.style]"
     :class="[
       `lt-space--${direction}`,
-      `lt-space--${align}`,
+      direction === 'horizontal' && `lt-space--${align}`,
       customize.class,
       {
         'lt-space--wrap': wrap,
