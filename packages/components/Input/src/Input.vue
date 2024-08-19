@@ -2,6 +2,7 @@
   import type { InputProps } from './types'
 
   import { computed, ref } from 'vue'
+  import { isUnoIcon } from '@lite-ui/utils'
 
   defineOptions({
     name: 'LtInput'
@@ -19,10 +20,8 @@
   const slots = defineSlots()
   const inputRef = ref<HTMLInputElement | null>()
 
-  const ICON_PREFIX = 'i-'
-
-  const isPrefixIcon = computed(() => !!props.prefix?.startsWith(ICON_PREFIX))
-  const isSuffixIcon = computed(() => !!props.suffix?.startsWith(ICON_PREFIX))
+  const isPrefixIcon = computed(() => isUnoIcon(props.prefix))
+  const isSuffixIcon = computed(() => isUnoIcon(props.suffix))
   const isAddonBefore = computed(() => !!props.addonBefore || !!slots.addonBefore)
   const isAddonAfter = computed(() => !!props.addonAfter || !!slots.addonAfter)
 
@@ -50,7 +49,11 @@
     inputRef.value?.blur()
   }
 
-  defineExpose({ focus, blur })
+  function clear() {
+    handleClearable()
+  }
+
+  defineExpose({ focus, blur, clear })
 </script>
 
 <template>

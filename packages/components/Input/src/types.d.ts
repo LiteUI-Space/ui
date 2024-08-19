@@ -31,6 +31,7 @@ export interface LtTextAreaProps extends Pick<LtInputProps, 'placeholder' | 'dis
 }
 
 export type InputProps = Partial<LtInputProps>
+export type InputPasswordProps = InputProps
 export type TextAreaProps = Partial<LtTextAreaProps>
 
 export type InputInstance = InstanceType<typeof import('./Input.vue')['default']>

@@ -19,6 +19,7 @@
 
   const sizeList: InputProps['size'][] = ['small', 'default', 'large']
   const size = ref(sizeList[1])
+  const textareaValue = ref('啊大姐说的安静的卡进度加快很多')
 </script>
 
 <template>
@@ -149,11 +150,11 @@
     />
   </DemoBlock>
 
-  <DemoBlock title="TextArea" col>
-    <TextArea />
+  <DemoBlock title="TextArea">
+    <TextArea v-model="textareaValue" />
   </DemoBlock>
 
-  <DemoBlock title="TextArea resize " col>
+  <DemoBlock title="TextArea resize ">
     <TextArea resize />
   </DemoBlock>
 </template>

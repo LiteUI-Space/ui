@@ -43,13 +43,21 @@ const InputPassowrd = {
 }
 
 const TextArea = {
-  'lt-textarea-wrapper': 'flex rounded-md lt-input-border lt-input--focus',
-  'lt-textarea-inner': 'px-2 py-2 outline-none bg-transparent border-none flex-1 placeholder:text-zinc-400',
-  'lt-textarea--resize': 'resize-none',
+  'lt-textarea': 'inline-flex relative rounded-md lt-input-border lt-input--focus bg-white',
+  'lt-textarea-inner': 'px-2 py-2 outline-none leading-5 border-none flex-1 placeholder:text-zinc-400 resize-y',
+  // textArea size
+  'lt-textarea-small': 'min-h-6',
+  'lt-textarea-default': 'min-h-7',
+  'lt-textarea-large': 'min-h-8',
+
+  // textArea resize none
+  'lt-textarea--resize-none': 'resize-none',
   // textArea hover
   'lt-textarea--hover': 'lt-input--hover',
   // textArea disabled
-  'lt-textarea--disabled': 'lt-input--disabled'
+  'lt-textarea--disabled': 'lt-input--disabled',
+  // textArea clearable
+  'lt-textarea--clearable': 'lt-input--clearable absolute right-3 top-2.5 z-99'
 }
 
 export const InputShortcuts = {
