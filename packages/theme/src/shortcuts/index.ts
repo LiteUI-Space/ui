@@ -3,6 +3,7 @@ import { common } from './common'
 import { Button } from './Button'
 import { Switch } from './Switch'
 import { Divider } from './Divider'
+import { CheckboxShortcuts } from './Checkbox'
 import { InputShortcuts as Input } from './Input'
 
 export const shortcuts = [
@@ -11,7 +12,8 @@ export const shortcuts = [
   Input,
   Switch,
   Divider,
-  Space
+  Space,
+  CheckboxShortcuts
 ]
 
 /**
