@@ -22,6 +22,7 @@
     class="lt-checkbox"
     :class="{
       'lt-checkbox--disabled': disabled,
+      'cursor-pointer': !readonly,
     }"
   >
     <span

@@ -1,5 +1,5 @@
 const Checkbox = {
-  'lt-checkbox': 'inline-flex items-baseline cursor-pointer select-none',
+  'lt-checkbox': 'inline-flex items-baseline',
   'lt-checkbox-inner': 'inline-flex-center transition self-center box-border w-4 h-4 border border-solid border-gray-200 rounded',
   'lt-checkbox-indeterminate': 'bg-white/85 inline-flex w-2 h-2px',
   'lt-checkbox-iconchecked': 'text-white',
