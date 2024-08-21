@@ -1,13 +1,14 @@
 interface LtCheckboxProps {
-  checked: boolean
   indeterminate: boolean
   disabled: boolean
+  readonly: boolean
 }
 
 export interface CheckboxGroupOptions {
   label: string | number
   value: string | number
   disabled?: boolean
+  readonly?: boolean
 }
 
 interface LtCheckboxGroupProps {

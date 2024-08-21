@@ -2,19 +2,21 @@
   import type { CheckboxGroupProps, LtComponentSize } from '@lite-ui/ui'
 
   import { ref } from 'vue'
-  import { Checkbox, CheckboxGroup } from '@lite-ui/ui'
+  import { Button, Checkbox, CheckboxGroup } from '@lite-ui/ui'
 
   import DemoBlock from './DemoBlock.vue'
 
   defineProps<{ size: LtComponentSize }>()
   const check = ref(false)
+  const checked = ref(true)
+  const vchecked = ref(true)
   function handleChange(val: boolean) {
     console.log('val', val)
   }
 
   const options = ['Apple', 'Pear', 'Orange']
   const options1: CheckboxGroupProps['options'] = [{ label: 'Apple', value: '0' }, { label: 'Pear', value: 'Pear' }, { label: 'Orange', value: 'Orange' }]
-  const options2 = [{ label: 'Apple', value: 'Apple', disabled: true }, { label: 'Pear', value: 'Pear' }, { label: 'Orange', value: 'Orange' }]
+  const options2 = [{ label: 'Apple', value: 'Apple', disabled: true }, { label: 'Pear', value: 'Pear', readonly: true }, { label: 'Orange', value: 'Orange' }]
 
   const checkval = ref(['Apple'])
   const checkval1 = ref(['0', 'Orange'])
@@ -29,27 +31,42 @@
     checkva3.value = val ? [...options3] : []
     indeterminate.value = false
   }
-  function handleCheckedGroupChange(val: (string | number)[]) {
+  function handleCheckedGroupChange(val: string[]) {
     const checkedCount = val.length
     checkall.value = checkedCount === options3.length
     indeterminate.value = checkedCount > 0 && checkedCount < options3.length
   }
+
+  const modelCheck = ref(true)
 </script>
 
 <template>
-  <Checkbox value="test" @change="handleChange">
+  <Checkbox :model-value="true" readonly @change=" modelCheck = true">
     Checkbox
   </Checkbox>
   <DemoBlock title="label">
-    <Checkbox :size="size" @change="handleChange">
-      Checkbox
+    <Button size="small" type="link" @click="checked = !checked">
+      checked:{{ checked }}
+    </Button>
+
+    <Checkbox
+      v-model="vchecked"
+      :size="size"
+      :readonly="checked"
+      @change="handleChange"
+    >
+      Checkbox v-model {{ vchecked }}
     </Checkbox>
   </DemoBlock>
   <DemoBlock title="checked">
-    <Checkbox :size="size" checked @change="handleChange">
+    <Checkbox
+      :size="size"
+      checked
+      @change="handleChange"
+    >
       checked
     </Checkbox>
-    <Checkbox v-model="check" :size="size" checked>
+    <Checkbox v-model="check" :size="size">
       v-model checked
     </Checkbox>
   </DemoBlock>
@@ -62,7 +79,7 @@
     <Checkbox :size="size" disabled>
       checked
     </Checkbox>
-    <Checkbox :size="size" checked disabled>
+    <Checkbox :size="size" :model-value="true" disabled>
       checked
     </Checkbox>
     <Checkbox :size="size" indeterminate disabled>
@@ -74,7 +91,7 @@
     <CheckboxGroup v-model="checkval" :options="options" />
     <span>{{ checkval }}</span>
     <br>
-    <CheckboxGroup v-model="checkval1 " :options="options1" />
+    <CheckboxGroup v-model="checkval1 " :options="options1" @change="handleChange" />
     <span>{{ checkval1 }}</span>
 
     <br>
@@ -88,5 +105,6 @@
     </Checkbox>
     <br>
     <CheckboxGroup v-model="checkva3" :options="options3" @change="handleCheckedGroupChange" />
+    {{ checkva3 }}
   </DemoBlock>
 </template>

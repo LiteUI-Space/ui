@@ -1,27 +1,16 @@
 <script setup lang="ts">
   import type { CheckboxProps } from './types'
 
-  import { watch } from 'vue'
-
   defineOptions({
     name: 'LtCheckbox'
   })
 
-  const props = withDefaults(defineProps<CheckboxProps>(), {
-    checked: false,
-    indeterminate: false
-  })
+  defineProps<CheckboxProps>()
   const emit = defineEmits<{
     change: [value: boolean]
   }>()
 
   const modelValue = defineModel<boolean>({ default: false })
-
-  watch(() => props.checked, val => {
-    modelValue.value = val
-  }, {
-    immediate: true
-  })
 
   function handleChange() {
     emit('change', modelValue.value)
@@ -38,18 +27,17 @@
     <span
       class="lt-checkbox-inner"
       :class="{
-        'lt-checkbox-inner--checked': modelValue || indeterminate,
+        'lt-checkbox-inner--checked': indeterminate || modelValue,
         'lt-checkbox-inner--disabled': disabled,
       }"
     >
       <input
         v-model="modelValue"
         type="checkbox"
-        :disabled="disabled"
+        :disabled="readonly || disabled"
         :checked="modelValue"
         hidden
         @change="handleChange"
-        @click.stop
       >
       <span
         v-if="indeterminate"
@@ -59,7 +47,7 @@
         }"
       />
       <span
-        v-else-if="modelValue || checked"
+        v-else-if="modelValue"
         i-carbon:checkmark
         class="lt-checkbox-iconchecked"
         :class="{

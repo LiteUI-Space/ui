@@ -21,6 +21,8 @@
 
   function handleChange(item: CheckboxGroupOptions, val: boolean) {
     if (val) {
+      if (modelValue.value.includes(item.value))
+        return
       modelValue.value.push(item.value)
     } else {
       const idx = modelValue.value.indexOf(item.value)
@@ -35,8 +37,9 @@
     <Checkbox
       v-for="item in options"
       :key="item.value"
-      :checked="modelValue.includes(item.value)"
+      :model-value="modelValue.includes(item.value)"
       :disabled="item.disabled"
+      :readonly="item.readonly"
       @change="val => handleChange(item, val)"
     >
       {{ item.label }}
