@@ -1,6 +1,6 @@
 const Radio = {
   'lt-radio': 'inline-flex items-baseline cursor-pointer',
-  'lt-radio-inner': 'inline-flex-center transition self-center box-border w-4 h-4 border border-solid border-gray-200 rounded-full',
+  'lt-radio-inner': 'inline-flex-center self-center box-border w-4 h-4 border border-solid border-gray-200 rounded-full',
   'lt-radio-icon': 'inline-flex w-6px h-6px bg-white rounded-full',
   'lt-radio-label': 'text-sm text-gray-900 mx-2',
   // radio checked

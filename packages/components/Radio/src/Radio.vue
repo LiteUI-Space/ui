@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import type { RadioChangeEvent, RadioProps } from './types'
 
-  import { inject } from 'vue'
+  import { computed, inject } from 'vue'
   import { radioGroupKey } from './constants'
 
   defineOptions({
@@ -14,11 +14,9 @@
   }>()
 
   const radioGroup = inject(radioGroupKey, undefined)
-  const modelValue = defineModel<boolean>({
-    get(val) {
-      return radioGroup ? radioGroup.model.value === props.value : val
-    }
-  })
+  const modelValue = defineModel<boolean>({ default: false })
+
+  const isChecked = computed(() => radioGroup ? radioGroup.model.value === props.value : modelValue.value)
 
   function handleChange(e: Event) {
     const target = e.target as HTMLInputElement
@@ -43,7 +41,7 @@
     <span
       class="lt-radio-inner"
       :class="{
-        'lt-radio-inner--checked': modelValue,
+        'lt-radio-inner--checked': isChecked,
         'lt-radio-inner--disabled': disabled,
       }"
     >
@@ -52,12 +50,12 @@
         :value="value"
         type="radio"
         :disabled="disabled"
-        :checked="modelValue"
+        :checked="isChecked"
         hidden
         @change="handleChange"
       >
       <span
-        v-if="modelValue"
+        v-if="isChecked"
         class="lt-radio-icon"
         :class="{
           'lt-radio-icon--disabled': disabled,
