@@ -6,6 +6,10 @@
 
   import Checkbox from './Checkbox.vue'
 
+  defineOptions({
+    name: 'LtCheckboxGroup'
+  })
+
   const props = defineProps<CheckboxGroupProps>()
   const emit = defineEmits<{
     change: [val: (string | number)[]]
@@ -38,7 +42,7 @@
       v-for="item in options"
       :key="item.value"
       :model-value="modelValue.includes(item.value)"
-      :disabled="item.disabled"
+      :disabled="disabled || item.disabled"
       :readonly="item.readonly"
       @change="val => handleChange(item, val)"
     >

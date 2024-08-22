@@ -19,3 +19,4 @@ interface LtCheckboxGroupProps {
 export type CheckboxProps = Partial<LtCheckboxProps>
 export type CheckboxGroupProps = LtCheckboxGroupProps
 export type CheckboxInstance = InstanceType<typeof import('./Checkbox.vue')['default']>
+export type CheckboxGroupInstance = InstanceType<typeof import('./CheckboxGroup.vue')['default']>
