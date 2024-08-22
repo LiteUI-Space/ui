@@ -41,7 +41,6 @@
     <span
       class="lt-radio-inner"
       :class="{
-        'lt-radio-inner--checked': isChecked,
         'lt-radio-inner--disabled': disabled,
       }"
     >
