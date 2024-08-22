@@ -25,7 +25,7 @@
     if (props.disabled)
       return
     modelValue.value = !modelValue.value
-    emit('change', modelValue.value)
+    emit('change', !modelValue.value)
   }
 </script>
 
