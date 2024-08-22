@@ -1,8 +1,8 @@
 const Checkbox = {
   'lt-checkbox': 'inline-flex items-baseline',
-  'lt-checkbox-inner': 'inline-flex-center transition self-center box-border w-4 h-4 border border-solid border-gray-200 rounded',
+  'lt-checkbox-inner': 'inline-flex-center self-center box-border w-4 h-4 border border-solid border-gray-200 rounded',
   'lt-checkbox-indeterminate': 'bg-white/85 inline-flex w-2 h-2px',
-  'lt-checkbox-iconchecked': 'text-white',
+  'lt-checkbox-iconchecked': 'text-white w-3 h-3',
   'lt-checkbox-label': 'text-sm text-gray-900 mx-2',
   // checkbox checked
   'lt-checkbox-inner--checked': 'bg-black/85 border-black/85!',
