@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import Radio from './components/Radio.vue'
+  import Checkbox from './components/Checkbox.vue'
   import SizeBtns from './components/SizeBtns.vue'
 
   import { ref, watch } from 'vue'
@@ -17,5 +17,6 @@
   <!-- <Switch /> -->
   <!-- <Drivide /> -->
   <!-- <Space :size="size" /> -->
-  <Radio />
+  <!-- <Radio /> -->
+  <Checkbox />
 </template>

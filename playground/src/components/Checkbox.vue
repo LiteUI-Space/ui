@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { CheckboxGroupProps, LtComponentSize } from '@lite-ui/ui'
+  import type { CheckboxGroupChangeEvent, CheckboxGroupProps, LtComponentSize } from '@lite-ui/ui'
 
   import { ref } from 'vue'
   import { Button, Checkbox, CheckboxGroup } from '@lite-ui/ui'
@@ -10,7 +10,7 @@
   const check = ref(false)
   const checked = ref(true)
   const vchecked = ref(true)
-  function handleChange(val: boolean) {
+  function handleChange(val: boolean | CheckboxGroupChangeEvent) {
     console.log('val', val)
   }
 
@@ -31,13 +31,14 @@
     checkva3.value = val ? [...options3] : []
     indeterminate.value = false
   }
-  function handleCheckedGroupChange(val: string[]) {
+  function handleCheckedGroupChange(val: CheckboxGroupChangeEvent) {
     const checkedCount = val.length
     checkall.value = checkedCount === options3.length
     indeterminate.value = checkedCount > 0 && checkedCount < options3.length
   }
 
   const modelCheck = ref(true)
+  const checkvalmodel = ref(['Apple'])
 </script>
 
 <template>
@@ -106,5 +107,20 @@
     <br>
     <CheckboxGroup v-model="checkva3" :options="options3" @change="handleCheckedGroupChange" />
     {{ checkva3 }}
+  </DemoBlock>
+
+  <DemoBlock title="CheckboxGroup slot">
+    <CheckboxGroup v-model="checkvalmodel" @change="handleChange">
+      <Checkbox value="Apple">
+        Apple
+      </Checkbox>
+      <Checkbox :value="0">
+        Pear
+      </Checkbox>
+      <Checkbox value="or">
+        Orange
+      </Checkbox>
+    </CheckboxGroup>
+    <span>{{ checkvalmodel }}</span>
   </DemoBlock>
 </template>
