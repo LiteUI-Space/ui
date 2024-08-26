@@ -1,9 +1,9 @@
 import ora from 'ora'
-import { $ } from 'execa'
 import chalk from 'chalk'
 import path from 'node:path'
 import fs from 'node:fs/promises'
 import process from 'node:process'
+import { execaCommand } from 'execa'
 import { fileURLToPath } from 'node:url'
 
 import { writeUnoConfig } from './generateUnoConfig'
@@ -21,7 +21,7 @@ createComponent()
 
 async function write(baseUrl: string, fileName: string, fileConent: string) {
   const filePath = path.join(_dirname, baseUrl, fileName)
-  const [, shortFilePath] = filePath.split(/packages\\/)
+  const [, shortFilePath] = filePath.split(/packages[\\|/]/)
 
   const spinner = ora(`createing file: ${shortFilePath}`).start()
   await fs.writeFile(filePath, fileConent)
@@ -187,7 +187,7 @@ async function applyCommand() {
     'linted successfully.'
   )
   await command(
-    'pnpm build:liteui',
+    'pnpm build:ui',
     'building...',
     'built successfully.'
   )
@@ -195,7 +195,7 @@ async function applyCommand() {
 
 async function command(command: string, startMsg: string, endMsg: string) {
   const spinners = ora(startMsg).start()
-  await $`${command}`.catch(err => {
+  await execaCommand(command).catch(err => {
     console.error(err)
     process.exit(1)
   })
