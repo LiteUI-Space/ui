@@ -11,8 +11,10 @@
         开始使用
       </Button>
     </NuxtLink> -->
-    <Button type="primary">
-      开始使用
-    </Button>
+    <NuxtLink to="/docs">
+      <Button type="primary">
+        开始使用
+      </Button>
+    </NuxtLink>
   </div>
 </template>

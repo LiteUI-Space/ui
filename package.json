@@ -23,6 +23,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
+    "docs": "pnpm run -C docs dev",
     "build:ui": "pnpm run -C packages/lite-ui build",
     "build:utils": "pnpm run -C packages/utils build",
     "stub:theme": "pnpm run -C packages/theme stub",

@@ -8,7 +8,8 @@
       aside
     </aside>
     <main class="relative">
-      main
+      <span>Docs > Button</span>
+      <ContentDoc />
     </main>
   </div>
 </template>
