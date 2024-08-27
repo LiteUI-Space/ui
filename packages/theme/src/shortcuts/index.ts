@@ -1,3 +1,4 @@
+import { Tag } from './Tag'
 import { Space } from './Space'
 import { common } from './common'
 import { Button } from './Button'
@@ -15,7 +16,8 @@ export const shortcuts = [
   Divider,
   Space,
   Checkbox,
-  Radio
+  Radio,
+  Tag
 ]
 
 /**

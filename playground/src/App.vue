@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import Drivide from './components/Drivide.vue'
+  import Tag from './components/Tag.vue'
   import SizeBtns from './components/SizeBtns.vue'
 
   import { ref, watch } from 'vue'
@@ -13,8 +13,9 @@
 <template>
   <SizeBtns v-model="size" />
   <!-- <Input /> -->
-  <Drivide />
+  <!-- <Drivide /> -->
   <!-- <Space :size="size" /> -->
   <!-- <Radio /> -->
   <!-- <Checkbox /> -->
+  <Tag />
 </template>

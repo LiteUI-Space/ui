@@ -35,6 +35,7 @@
     "@lite-ui/radio": "workspace:*",
     "@lite-ui/space": "workspace:*",
     "@lite-ui/switch": "workspace:*",
+    "@lite-ui/tag": "workspace:*",
     "@lite-ui/theme": "workspace:*",
     "@lite-ui/utils": "workspace:*"
   },

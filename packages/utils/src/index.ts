@@ -2,10 +2,10 @@ import { ICON_PREFIX } from './constant'
 
 export type * from './types'
 
-export function isUnoIcon(str?: string) {
-  if (!str)
+export function isUnoIcon(strOrNum?: string | boolean) {
+  if (!strOrNum)
     return false
-  return str.startsWith(ICON_PREFIX)
+  return strOrNum.startsWith(ICON_PREFIX)
 }
 
 export function isObject(obj: any): obj is object {
