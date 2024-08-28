@@ -7,6 +7,7 @@ import { Divider } from './Divider'
 import { InputShortcuts as Input } from './Input'
 import { RadioShortcuts as Radio } from './Radio'
 import { CheckboxShortcuts as Checkbox } from './Checkbox'
+import { BreadcrumbShortcuts as Breadcrumb } from './Breadcrumb'
 
 export const shortcuts = [
   common,
@@ -17,7 +18,8 @@ export const shortcuts = [
   Space,
   Checkbox,
   Radio,
-  Tag
+  Tag,
+  Breadcrumb
 ]
 
 /**

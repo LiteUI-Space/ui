@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import Tag from './components/Tag.vue'
   import SizeBtns from './components/SizeBtns.vue'
+  import Breadcrumb from './components/Breadcrumb.vue'
 
   import { ref, watch } from 'vue'
 
@@ -17,5 +17,6 @@
   <!-- <Space :size="size" /> -->
   <!-- <Radio /> -->
   <!-- <Checkbox /> -->
-  <Tag />
+  <!-- <Tag /> -->
+  <Breadcrumb />
 </template>

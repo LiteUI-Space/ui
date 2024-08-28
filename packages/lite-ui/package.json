@@ -28,6 +28,7 @@
     "build": "unbuild"
   },
   "dependencies": {
+    "@lite-ui/breadcrumb": "workspace:*",
     "@lite-ui/button": "workspace:*",
     "@lite-ui/checkbox": "workspace:*",
     "@lite-ui/divider": "workspace:*",
