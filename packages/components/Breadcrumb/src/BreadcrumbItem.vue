@@ -4,6 +4,10 @@
 
   import { breadcrumbKey } from './constants'
 
+  defineOptions({
+    name: 'LtBreadcrumbItem'
+  })
+
   const breadcrumb = inject(breadcrumbKey, undefined)
   const isIcon = computed(() => isUnoIcon(breadcrumb?.separator))
 </script>

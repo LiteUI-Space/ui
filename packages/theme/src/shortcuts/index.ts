@@ -1,4 +1,5 @@
 import { Tag } from './Tag'
+import { Tabs } from './Tabs'
 import { Space } from './Space'
 import { common } from './common'
 import { Button } from './Button'
@@ -19,7 +20,8 @@ export const shortcuts = [
   Checkbox,
   Radio,
   Tag,
-  Breadcrumb
+  Breadcrumb,
+  Tabs
 ]
 
 /**
