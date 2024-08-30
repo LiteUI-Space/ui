@@ -81,6 +81,9 @@ async function writePkgJSON(baseUrl: string) {
     "dist",
     "package.json"
   ],
+  "engines": {
+    "vue": ">=3.4.0"
+  },
   "scripts": {
     "build": "mkdist -d"
   },

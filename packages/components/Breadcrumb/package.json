@@ -8,12 +8,6 @@
     "unocss",
     "breadcrumb"
   ],
-  "publishConfig": {
-    "access": "public",
-    "main": "dist/index.mjs",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.ts"
-  },
   "main": "src/index.ts",
   "module": "src/index.ts",
   "types": "src/index.ts",
@@ -22,6 +16,15 @@
     "dist",
     "package.json"
   ],
+  "engines": {
+    "vue": ">=3.4.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.mjs",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts"
+  },
   "scripts": {
     "build": "mkdist -d"
   },
