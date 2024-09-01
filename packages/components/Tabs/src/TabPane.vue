@@ -9,7 +9,7 @@
   })
   const props = defineProps<TabPaneProps>()
 
-  defineSlots<{
+  const slot = defineSlots<{
     name: () => any
     default: () => any
   }>()
@@ -18,8 +18,11 @@
   const tabs = inject(TabsKey, undefined)
 
   watch(() => props, val => {
-    console.log('props', val)
-    tabs?.update()
+    tabs?.update({
+      ...val,
+      slot: slot.name,
+      key: ctx?.vnode.key
+    })
   }, {
     immediate: true,
     deep: true

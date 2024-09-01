@@ -14,7 +14,7 @@
   <Button @click="testDisabled = !testDisabled">
     test Disabled: {{ testDisabled }}
   </Button>
-  <!-- <Tabs>
+  <Tabs>
     <TabPane key="1" name="tab1">
       tab1
     </TabPane>
@@ -42,7 +42,7 @@
         tab3
       </TabPane>
     </Tabs>
-  </DemoBlock> -->
+  </DemoBlock>
 
   <DemoBlock title="disabled">
     <Tabs>

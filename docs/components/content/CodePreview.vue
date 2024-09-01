@@ -6,10 +6,11 @@
     title: string
   }>()
 
-  const url = useRequestURL()
+  const route = useRoute()
   const comp = resolveComponent(props.src)
 
-  const src = `${url.pathname.split('/').pop()}/${props.src}.vue`
+  const compDir = route.params.slug.at(-1)
+  const src = `${compDir}/${props.src}.vue`
   const { data } = await useFetch(`/api/demoCode?src=${src}`)
 </script>
 

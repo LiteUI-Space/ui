@@ -1,8 +1,5 @@
 <script setup lang="ts">
-  import type {
-    FunctionalComponent,
-    VNode
-  } from 'vue'
+  import type { FunctionalComponent } from 'vue'
   import type { SlotRenderProps, TabItem, TabsProps } from './types'
 
   import { TabsKey } from './constants'
@@ -13,7 +10,7 @@
     nextTick,
     onMounted,
     provide,
-    ref
+    reactive
   } from 'vue'
 
   defineOptions({
@@ -28,7 +25,7 @@
   const slot = defineSlots()
 
   const modelValue = defineModel<string | number>({ default: '' })
-  const tabsItems = ref<TabItem[]>([])
+  const tabsItems = reactive(new Map<string, TabItem>())
 
   onMounted(async () => {
     await nextTick()
@@ -46,18 +43,8 @@
     return h(Fragment, null, [props.item.name || props.item.slot?.()])
   }
 
-  function update() {
-    const nodes = slot.default() as VNode[]
-    if (!nodes.length)
-      return
-
-    tabsItems.value = nodes.map(node => {
-      return {
-        ...node.props,
-        key: node.key,
-        slot: node?.children?.name
-      }
-    })
+  function update(data: TabItem) {
+    tabsItems.set(data.key, data)
   }
 
   provide(TabsKey, {
@@ -68,13 +55,13 @@
 
 <template>
   <div>
-    <div v-if="tabsItems.length" class="mb-4 relative flex w-full cursor-pointer border-b border-b-solid border-b-gray-200">
+    <div v-if="tabsItems.size" class="mb-4 relative flex w-full cursor-pointer border-b border-b-solid border-b-gray-200">
       <div
-        v-for="item in tabsItems"
+        v-for="[, item] in tabsItems"
         :key="item.key"
         class="pb-2 px-4 text-gray-600"
         :class="{
-          'border-b-2 border-b-gray-800 border-b-solid': modelValue === item.key,
+          'border-b-2 border-b-gray-800 border-b-solid': modelValue === item.key && !item.disabled,
           'op-60! cursor-not-allowed!': item?.disabled,
         }"
         @click="handleClick(item)"
