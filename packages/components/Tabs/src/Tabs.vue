@@ -17,7 +17,10 @@
     name: 'LtTabs'
   })
 
-  defineProps<TabsProps>()
+  const props = withDefaults(defineProps<TabsProps>(), {
+    align: 'left'
+  })
+
   const emit = defineEmits<{
     change: [val: string | number]
   }>()
@@ -49,24 +52,30 @@
 
   provide(TabsKey, {
     model: computed(() => modelValue.value),
+    lazy: computed(() => props.lazy),
     update
   })
 </script>
 
 <template>
   <div>
-    <div v-if="tabsItems.size" class="mb-4 relative flex w-full cursor-pointer border-b border-b-solid border-b-gray-200">
+    <div v-if="tabsItems.size" class="lt-tabs" :class="`lt-tabs-item--${align}`">
       <div
         v-for="[, item] in tabsItems"
         :key="item.key"
-        class="pb-2 px-4 text-gray-600"
+        class="lt-tabs-item"
         :class="{
-          'border-b-2 border-b-gray-800 border-b-solid': modelValue === item.key && !item.disabled,
-          'op-60! cursor-not-allowed!': item?.disabled,
+          'lt-tabs-item--active': modelValue === item.key && !item.disabled,
+          'lt-tabs-item--disabled': item?.disabled,
         }"
         @click="handleClick(item)"
       >
-        <div class="flex-center text-sm  text-gray-500" :class="{ 'text-gray-900': modelValue === item.key }">
+        <div
+          class="lt-tabs-item-text"
+          :class="{
+            'lt-tabs-item-text--active': modelValue === item.key,
+          }"
+        >
           <SlotRender :item="item" />
         </div>
       </div>

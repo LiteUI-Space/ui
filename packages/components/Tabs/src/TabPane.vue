@@ -2,7 +2,12 @@
   import type { TabPaneProps } from './types'
 
   import { TabsKey } from './constants'
-  import { getCurrentInstance, inject, watch } from 'vue'
+  import {
+    computed,
+    getCurrentInstance,
+    inject,
+    watch
+  } from 'vue'
 
   defineOptions({
     name: 'LtTabPane'
@@ -27,10 +32,20 @@
     immediate: true,
     deep: true
   })
+
+  const isActived = computed(() => !props.disabled && tabs?.model.value === ctx?.vnode.key)
+  const isLazy = computed(() => props.lazy || tabs?.lazy.value)
 </script>
 
 <template>
-  <div v-show="!disabled && tabs?.model.value === ctx?.vnode.key">
-    <slot />
-  </div>
+  <template v-if="isLazy">
+    <div v-if="isActived">
+      <slot />
+    </div>
+  </template>
+  <template v-else>
+    <div v-show="isActived">
+      <slot />
+    </div>
+  </template>
 </template>
