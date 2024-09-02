@@ -2,6 +2,7 @@ import { Tag } from './Tag'
 import { Tabs } from './Tabs'
 import { Card } from './Card'
 import { Space } from './Space'
+import { Empty } from './Empty'
 import { common } from './common'
 import { Button } from './Button'
 import { Switch } from './Switch'
@@ -23,7 +24,8 @@ export const shortcuts = [
   Tag,
   Breadcrumb,
   Tabs,
-  Card
+  Card,
+  Empty
 ]
 
 /**

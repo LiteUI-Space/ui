@@ -33,6 +33,7 @@
     "@lite-ui/card": "workspace:*",
     "@lite-ui/checkbox": "workspace:*",
     "@lite-ui/divider": "workspace:*",
+    "@lite-ui/empty": "workspace:*",
     "@lite-ui/input": "workspace:*",
     "@lite-ui/radio": "workspace:*",
     "@lite-ui/space": "workspace:*",
