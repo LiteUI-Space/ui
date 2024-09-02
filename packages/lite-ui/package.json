@@ -30,6 +30,7 @@
   "dependencies": {
     "@lite-ui/breadcrumb": "workspace:*",
     "@lite-ui/button": "workspace:*",
+    "@lite-ui/card": "workspace:*",
     "@lite-ui/checkbox": "workspace:*",
     "@lite-ui/divider": "workspace:*",
     "@lite-ui/input": "workspace:*",

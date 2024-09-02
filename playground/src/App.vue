@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import Tabs from './components/Tabs.vue'
+  import Card from './components/Card.vue'
   import SizeBtns from './components/SizeBtns.vue'
 
   import { ref, watch } from 'vue'
@@ -19,5 +19,5 @@
   <!-- <Checkbox /> -->
   <!-- <Tag /> -->
   <!-- <Breadcrumb /> -->
-  <Tabs />
+  <Card />
 </template>

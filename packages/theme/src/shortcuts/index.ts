@@ -1,5 +1,6 @@
 import { Tag } from './Tag'
 import { Tabs } from './Tabs'
+import { Card } from './Card'
 import { Space } from './Space'
 import { common } from './common'
 import { Button } from './Button'
@@ -21,7 +22,8 @@ export const shortcuts = [
   Radio,
   Tag,
   Breadcrumb,
-  Tabs
+  Tabs,
+  Card
 ]
 
 /**
