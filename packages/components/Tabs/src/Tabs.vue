@@ -43,7 +43,7 @@
   }
 
   const SlotRender: FunctionalComponent<SlotRenderProps> = (props: SlotRenderProps) => {
-    return h(Fragment, null, [props.item.name || props.item.slot?.()])
+    return h(Fragment, null, [props.item.slot?.() || props.item.name])
   }
 
   function update(data: TabItem) {

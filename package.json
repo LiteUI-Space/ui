@@ -30,7 +30,7 @@
     "build:ui": "pnpm run -C packages/lite-ui build",
     "build:utils": "pnpm run -C packages/utils build",
     "build:theme": "pnpm run -C packages/theme build",
-    "stub:theme": "pnpm run -C packages/theme stub",
+    "dev:theme": "pnpm run -C packages/theme stub",
     "play": "pnpm run -C playground dev",
     "release": "bumpp -r",
     "comp": "esno scripts/create-component.ts",

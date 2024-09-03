@@ -27,14 +27,14 @@
       'lt-tag--no-border': !bordered,
     }"
   >
-    <span class="inline-flex">
-      <span v-if="$slots.icon" class="lt-tag-icon">
+    <span v-if="$slots.icon || isIcon" class="inline-flex">
+      <span v-if="$slots.icon" class="lt-tag-icon ">
         <slot name="icon" />
       </span>
-      <span v-else-if="isIcon" class="lt-tag-icon" :class="icon" />
+      <span v-else class="lt-tag-icon" :class="icon" />
     </span>
     <slot />
-    <span class="inline-flex" @click="$emit('close')">
+    <span v-if="$slots.closeIcon || isCloseIcon || closeIcon" class="inline-flex" @click="$emit('close')">
       <span
         v-if="$slots.closeIcon"
         class="lt-tag-icon"
@@ -42,7 +42,7 @@
         <slot name="closeIcon" />
       </span>
       <span v-else-if="isCloseIcon" class="lt-tag-icon" :class="[isCloseIcon ? closeIcon : 'i-carbon:close']" />
-      <span v-else-if="closeIcon" i-carbon:close class="lt-tag-icon" />
+      <span v-else i-carbon:close class="lt-tag-icon" />
     </span>
   </span>
 </template>

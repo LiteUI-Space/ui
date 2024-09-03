@@ -1,7 +1,7 @@
 interface LtTagProps {
   bordered: boolean
   closeIcon: boolean | string
-  icon: boolean | string
+  icon: string
 }
 
 export type TagProps = Partial<LtTagProps>
