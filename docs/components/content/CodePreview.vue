@@ -6,12 +6,12 @@
     title: string
   }>()
 
-  const route = useRoute()
+  // const route = useRoute()
   const comp = resolveComponent(props.src)
 
-  const compDir = route.params.slug.at(-1)
-  const src = `${compDir}/${props.src}.vue`
-  const { data } = await useFetch(`/api/demoCode?src=${src}`)
+  // const compDir = route.params.slug.at(-1)
+  // const src = `${compDir}/${props.src}.vue`
+  // const { data } = await useFetch(`/api/demoCode?src=${src}`)
 </script>
 
 <template>
@@ -25,7 +25,8 @@
       </Divider>
       <div class="prose demo">
         <ContentSlot />
-        <textarea v-model="data.code" class="w-full h-200px" />
+        <ContentSlot :use="$slots.code" />
+        <!-- <textarea v-model="data.code" class="w-full h-200px" /> -->
       </div>
     </div>
   </div>
