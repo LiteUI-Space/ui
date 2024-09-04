@@ -26,3 +26,4 @@ dist-ssr
 .nuxt
 pnpm-lock.yaml
 packages/components/**/unocss.config.ts
+.output
