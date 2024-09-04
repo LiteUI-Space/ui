@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import type { LtComponentSize } from '@lite-ui/ui'
+  import type { LtComponentSize } from '@lite-space/ui'
 
-  import { Button, Space } from '@lite-ui/ui'
+  import { Button, Space } from '@lite-space/ui'
 
   const sizeList: LtComponentSize[] = ['small', 'default', 'large']
   const modelValue = defineModel({ default: 'default' })

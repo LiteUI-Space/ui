@@ -1,5 +1,5 @@
 // https://unocss.dev/integrations/vite
-import { presetLite } from '@lite-ui/theme'
+import { presetLite } from '@lite-space/theme'
 import {
   defineConfig,
   presetAttributify,

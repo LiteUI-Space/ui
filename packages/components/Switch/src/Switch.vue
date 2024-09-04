@@ -2,7 +2,7 @@
   import type { SwitchProps } from './types'
 
   import { computed, useSlots } from 'vue'
-  import { isUnoIcon } from '@lite-ui/utils'
+  import { isUnoIcon } from '@lite-space/utils'
 
   defineOptions({
     name: 'LtSwitch'

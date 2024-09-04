@@ -1,19 +1,19 @@
 ---
-"@lite-ui/breadcrumb": major
-"@lite-ui/button": major
-"@lite-ui/card": major
-"@lite-ui/checkbox": major
-"@lite-ui/divider": major
-"@lite-ui/empty": major
-"@lite-ui/input": major
-"@lite-ui/radio": major
-"@lite-ui/space": major
-"@lite-ui/switch": major
-"@lite-ui/tabs": major
-"@lite-ui/tag": major
-"@lite-ui/ui": major
-"@lite-ui/theme": major
-"@lite-ui/utils": major
+"@lite-space/breadcrumb": major
+"@lite-space/button": major
+"@lite-space/card": major
+"@lite-space/checkbox": major
+"@lite-space/divider": major
+"@lite-space/empty": major
+"@lite-space/input": major
+"@lite-space/radio": major
+"@lite-space/space": major
+"@lite-space/switch": major
+"@lite-space/tabs": major
+"@lite-space/tag": major
+"@lite-space/ui": major
+"@lite-space/theme": major
+"@lite-space/utils": major
 ---
 
 第一次提交

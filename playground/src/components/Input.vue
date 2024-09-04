@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  import type { InputProps } from '@lite-ui/ui'
+  import type { InputProps } from '@lite-space/ui'
 
   import { ref } from 'vue'
-  import { Button, Input, InputPassword, TextArea } from '@lite-ui/ui'
+  import { Button, Input, InputPassword, TextArea } from '@lite-space/ui'
 
   import DemoBlock from './DemoBlock.vue'
 

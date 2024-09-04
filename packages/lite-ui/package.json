@@ -1,5 +1,5 @@
 {
-  "name": "@lite-ui/ui",
+  "name": "@lite-space/ui",
   "type": "module",
   "version": "0.0.0",
   "description": "A Vue3 based UnoCSS UI library.",
@@ -28,20 +28,20 @@
     "build": "unbuild"
   },
   "dependencies": {
-    "@lite-ui/breadcrumb": "workspace:*",
-    "@lite-ui/button": "workspace:*",
-    "@lite-ui/card": "workspace:*",
-    "@lite-ui/checkbox": "workspace:*",
-    "@lite-ui/divider": "workspace:*",
-    "@lite-ui/empty": "workspace:*",
-    "@lite-ui/input": "workspace:*",
-    "@lite-ui/radio": "workspace:*",
-    "@lite-ui/space": "workspace:*",
-    "@lite-ui/switch": "workspace:*",
-    "@lite-ui/tabs": "workspace:*",
-    "@lite-ui/tag": "workspace:*",
-    "@lite-ui/theme": "workspace:*",
-    "@lite-ui/utils": "workspace:*"
+    "@lite-space/breadcrumb": "workspace:*",
+    "@lite-space/button": "workspace:*",
+    "@lite-space/card": "workspace:*",
+    "@lite-space/checkbox": "workspace:*",
+    "@lite-space/divider": "workspace:*",
+    "@lite-space/empty": "workspace:*",
+    "@lite-space/input": "workspace:*",
+    "@lite-space/radio": "workspace:*",
+    "@lite-space/space": "workspace:*",
+    "@lite-space/switch": "workspace:*",
+    "@lite-space/tabs": "workspace:*",
+    "@lite-space/tag": "workspace:*",
+    "@lite-space/theme": "workspace:*",
+    "@lite-space/utils": "workspace:*"
   },
   "devDependencies": {
     "unbuild": "^2.0.0"

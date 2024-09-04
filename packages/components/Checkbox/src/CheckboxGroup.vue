@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import type { CheckboxBasicValue, CheckboxGroupChangeEvent, CheckboxGroupProps } from './types'
 
-  import { isObject } from '@lite-ui/utils'
+  import { isObject } from '@lite-space/utils'
   import { computed, nextTick, provide } from 'vue'
 
   import Checkbox from './Checkbox.vue'

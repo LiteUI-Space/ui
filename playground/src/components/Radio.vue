@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  import type { CheckboxGroupProps, RadioChangeEvent } from '@lite-ui/ui'
+  import type { CheckboxGroupProps, RadioChangeEvent } from '@lite-space/ui'
 
   import { ref } from 'vue'
-  import { Radio, RadioGroup } from '@lite-ui/ui'
+  import { Radio, RadioGroup } from '@lite-space/ui'
 
   import DemoBlock from './DemoBlock.vue'
 

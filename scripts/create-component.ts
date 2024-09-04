@@ -58,7 +58,7 @@ async function createComponent() {
 
 async function writePkgJSON(baseUrl: string) {
   const pkgContent = `{
-  "name": "@lite-ui/${lowerCaseCompName}",
+  "name": "@lite-space/${lowerCaseCompName}",
   "type": "module",
   "version": "${pkgVersion}",
   "keywords": [
@@ -165,11 +165,11 @@ async function appendThemeShortcutsIndex(baseUrl: string) {
 
 async function writeLiteuiIndex() {
   const file = await fs.readFile(path.join(_dirname, 'lite-ui/src/index.ts'), 'utf-8')
-  const content = `${file}export * from '@lite-ui/${lowerCaseCompName}'`
+  const content = `${file}export * from '@lite-space/${lowerCaseCompName}'`
   return write('lite-ui/src', 'index.ts', content)
 }
 async function appendLiteuiDepToPkg() {
-  const depName = `@lite-ui/${lowerCaseCompName}`
+  const depName = `@lite-space/${lowerCaseCompName}`
   const pkg = { ...liteuiPkg }
 
   if (!(depName in pkg.dependencies)) {

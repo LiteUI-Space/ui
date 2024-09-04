@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Button } from '@lite-ui/ui'
+  import { Button } from '@lite-space/ui'
 </script>
 
 <template>

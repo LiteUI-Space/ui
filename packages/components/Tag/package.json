@@ -1,5 +1,5 @@
 {
-  "name": "@lite-ui/tag",
+  "name": "@lite-space/tag",
   "type": "module",
   "version": "0.0.0",
   "keywords": [
@@ -26,7 +26,7 @@
     "build": "mkdist -d"
   },
   "dependencies": {
-    "@lite-ui/utils": "workspace:*"
+    "@lite-space/utils": "workspace:*"
   },
   "devDependencies": {
     "@vue/tsconfig": "^0.5.1",

@@ -1,5 +1,5 @@
 {
-  "name": "@lite-ui/docs",
+  "name": "@lite-space/docs",
   "type": "module",
   "private": true,
   "scripts": {
@@ -10,8 +10,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@lite-ui/theme": "workspace:*",
-    "@lite-ui/ui": "workspace:*",
+    "@lite-space/theme": "workspace:*",
+    "@lite-space/ui": "workspace:*",
     "@nuxt/content": "^2.13.2",
     "@nuxt/image": "^1.8.0",
     "@vueuse/core": "^10.11.1",

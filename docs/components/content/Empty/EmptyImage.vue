@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Empty } from '@lite-ui/ui'
+  import { Empty } from '@lite-space/ui'
 </script>
 
 <template>

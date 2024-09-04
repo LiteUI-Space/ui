@@ -2,7 +2,7 @@
   import type { TagProps } from './types'
 
   import { computed } from 'vue'
-  import { isUnoIcon } from '@lite-ui/utils'
+  import { isUnoIcon } from '@lite-space/utils'
 
   defineOptions({
     name: 'LtTag'

@@ -2,7 +2,7 @@
   import type { RadioBasicValue, RadioGroupChangeEvent, RadioGroupProps } from './types'
 
   import { computed, provide } from 'vue'
-  import { isObject } from '@lite-ui/utils'
+  import { isObject } from '@lite-space/utils'
 
   import Radio from './Radio.vue'
   import { radioGroupKey } from './constants'

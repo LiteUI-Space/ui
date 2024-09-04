@@ -4,7 +4,7 @@ import { generateSafelist, shortcuts } from './shortcuts'
 
 export const presetLite = definePreset(() => {
   return {
-    name: '@lite-ui/theme',
+    name: '@lite-space/theme',
     shortcuts,
     safelist: generateSafelist(),
     rules

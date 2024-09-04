@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  import type { CheckboxGroupChangeEvent, CheckboxGroupProps, LtComponentSize } from '@lite-ui/ui'
+  import type { CheckboxGroupChangeEvent, CheckboxGroupProps, LtComponentSize } from '@lite-space/ui'
 
   import { ref } from 'vue'
-  import { Button, Checkbox, CheckboxGroup } from '@lite-ui/ui'
+  import { Button, Checkbox, CheckboxGroup } from '@lite-space/ui'
 
   import DemoBlock from './DemoBlock.vue'
 

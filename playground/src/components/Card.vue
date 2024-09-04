@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import type { LtComponentSize } from '@lite-ui/ui'
+  import type { LtComponentSize } from '@lite-space/ui'
 
-  import { Card } from '@lite-ui/ui'
+  import { Card } from '@lite-space/ui'
   import DemoBlock from './DemoBlock.vue'
 
   defineProps<{ size: LtComponentSize }>()

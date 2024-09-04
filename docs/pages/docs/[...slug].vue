@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Breadcrumb } from '@lite-ui/ui'
+  import { Breadcrumb } from '@lite-space/ui'
 
   const route = useRoute()
   const { data: page, error } = await useAsyncData(route.path, () => queryContent(route.path).findOne())

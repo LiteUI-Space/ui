@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Switch } from '@lite-ui/ui'
+  import { Switch } from '@lite-space/ui'
 
   const checked = ref(true)
 </script>

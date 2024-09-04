@@ -1,4 +1,4 @@
-import type { LtComponentSize } from '@lite-ui/utils'
+import type { LtComponentSize } from '@lite-space/utils'
 
 interface LtButtonProps {
   type: 'text' | 'link' | 'primary' | 'default'

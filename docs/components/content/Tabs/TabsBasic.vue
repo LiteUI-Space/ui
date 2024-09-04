@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { TabPane, Tabs } from '@lite-ui/ui'
+  import { TabPane, Tabs } from '@lite-space/ui'
 
   const activeKey = ref('1')
 </script>

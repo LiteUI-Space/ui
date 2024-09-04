@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Tag } from '@lite-ui/ui'
+  import { Tag } from '@lite-space/ui'
 </script>
 
 <template>

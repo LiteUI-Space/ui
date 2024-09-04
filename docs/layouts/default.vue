@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Button, Space } from '@lite-ui/ui'
+  import { Button, Space } from '@lite-space/ui'
 
   const navList = [
     { name: 'Docs', path: '/docs' },

@@ -2,7 +2,7 @@
   import type { InputProps } from './types'
 
   import { computed, ref } from 'vue'
-  import { isUnoIcon } from '@lite-ui/utils'
+  import { isUnoIcon } from '@lite-space/utils'
 
   defineOptions({
     name: 'LtInput'

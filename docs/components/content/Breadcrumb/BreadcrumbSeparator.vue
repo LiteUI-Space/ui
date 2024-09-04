@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Breadcrumb, BreadcrumbItem } from '@lite-ui/ui'
+  import { Breadcrumb, BreadcrumbItem } from '@lite-space/ui'
 </script>
 
 <template>

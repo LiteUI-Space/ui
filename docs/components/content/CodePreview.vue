@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Divider } from '@lite-ui/ui'
+  import { Divider } from '@lite-space/ui'
 
   const props = defineProps<{
     src: string

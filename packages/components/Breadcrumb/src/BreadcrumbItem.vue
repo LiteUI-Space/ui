@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { computed, inject } from 'vue'
-  import { isUnoIcon } from '@lite-ui/utils'
+  import { isUnoIcon } from '@lite-space/utils'
 
   import { breadcrumbKey } from './constants'
 

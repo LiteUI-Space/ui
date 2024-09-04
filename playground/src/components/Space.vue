@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  import type { LtComponentSize } from '@lite-ui/ui'
+  import type { LtComponentSize } from '@lite-space/ui'
 
   import { ref } from 'vue'
-  import { Button, Input, Space } from '@lite-ui/ui'
+  import { Button, Input, Space } from '@lite-space/ui'
 
   import DemoBlock from './DemoBlock.vue'
 
