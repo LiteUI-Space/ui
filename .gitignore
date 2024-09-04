@@ -27,3 +27,4 @@ dist-ssr
 pnpm-lock.yaml
 packages/components/**/unocss.config.ts
 .output
+.env
