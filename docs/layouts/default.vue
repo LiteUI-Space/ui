@@ -19,7 +19,7 @@
                 alt="logo"
                 class="w-6 h-6"
               > -->
-              <span class="font-500">Lite-ui/ui</span>
+              <span class="font-500">lite-space/ui</span>
             </NuxtLink>
             <NuxtLink
               v-for="item in navList"
