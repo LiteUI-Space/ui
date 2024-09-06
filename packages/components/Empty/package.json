@@ -28,6 +28,9 @@
   "scripts": {
     "build": "mkdist -d"
   },
+  "dependencies": {
+    "@lite-space/icon": "workspace:*"
+  },
   "devDependencies": {
     "@vue/tsconfig": "^0.5.1",
     "mkdist": "^1.5.4",

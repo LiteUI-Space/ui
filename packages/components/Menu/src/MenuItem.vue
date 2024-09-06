@@ -3,6 +3,7 @@
 
   import { computed, inject, ref } from 'vue'
   import { isUnoIcon } from '@lite-space/utils'
+  import { IconArrowDown } from '@lite-space/icon'
 
   import { menuKey } from './constants'
 
@@ -20,18 +21,8 @@
   const menu = inject(menuKey, undefined)
   const isChecked = computed(() => menu?.model.value === props.value)
   const isIcon = computed(() => isUnoIcon(props.icon))
-  const cls = computed(() => {
-    const isTitle = props.title || slot.title
-    return [
-      {
-        'bg-gray-100!': isChecked.value && !isTitle
-      },
-      isTitle ? 'lt-subMenuItem' : 'lt-menuItem-other'
-    ]
-  })
-
+  const isTitle = computed(() => props.title || slot.title)
   const isOpen = ref(props.open || menu?.open.value)
-  const subMenuItemRef = ref<HTMLUListElement>()
 
   function handleChange() {
     if (!props.title) {
@@ -46,10 +37,15 @@
 <template>
   <li
     class="lt-menuItem"
-    :class="cls"
+    :class="[
+      {
+        'lt-menuItem--active': isChecked && !isTitle,
+      },
+      isTitle ? 'lt-subMenuItem' : 'lt-menuItem-other',
+    ]"
     @click.stop="handleChange"
   >
-    <template v-if="$slots.title || title">
+    <template v-if="isTitle">
       <div class="lt-subMenuItem-title" @click.stop="handleOpen">
         <div class="flex items-center w-full">
           <template v-if="isIcon || $slots.icon">
@@ -60,15 +56,16 @@
             {{ title }}
           </slot>
         </div>
-        <span
-          i-carbon:chevron-down
-          class="w-5 h-5 transition"
-          :class="{
-            '-rotate-z-90': !isOpen,
-          }"
-        />
+        <div class="flex-center">
+          <IconArrowDown
+            class="w-5 h-5 text-gray-400 transition"
+            :class="{
+              '-rotate-z-90': !isOpen,
+            }"
+          />
+        </div>
       </div>
-      <ul v-if="isOpen" ref="subMenuItemRef" class="p-0 w-full">
+      <ul v-if="isOpen" class="p-0 w-full">
         <slot />
       </ul>
     </template>

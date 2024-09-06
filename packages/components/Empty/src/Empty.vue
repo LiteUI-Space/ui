@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import type { EmptyProps } from './types'
 
-  import EmptyIcon from './EmptyIcon.vue'
+  import { IconEmpty } from '@lite-space/icon'
 
   defineOptions({
     name: 'LtEmpty'
@@ -19,7 +19,7 @@
         :class="imageClass"
         :src="image"
       >
-      <EmptyIcon v-else />
+      <IconEmpty v-else class="text-gray-200 w-full h-full" />
     </div>
     <div v-if="$slots.description || description" class="lt-empty-description">
       <slot v-if="$slots.description" name="description" />

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import Icon from './components/Icon.vue'
+  import Menu from './components/Menu.vue'
   import SizeBtns from './components/SizeBtns.vue'
 
   import { ref, watch } from 'vue'
@@ -18,6 +18,6 @@
   <!-- <Radio /> -->
   <!-- <Checkbox /> -->
   <!-- <Card /> -->
-  <!-- <Menu /> -->
-  <Icon />
+  <Menu />
+  <!-- <Icon /> -->
 </template>
