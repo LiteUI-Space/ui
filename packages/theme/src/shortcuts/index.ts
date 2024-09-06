@@ -1,18 +1,18 @@
-import { Tag } from './Tag'
-import { Tabs } from './Tabs'
-import { Card } from './Card'
-import { Space } from './Space'
-import { Empty } from './Empty'
-import { common } from './common'
+import { BreadcrumbShortcuts as Breadcrumb } from './Breadcrumb';
 import { Button } from './Button'
-import { Switch } from './Switch'
-import { Divider } from './Divider'
-import { MenuShortcuts as Menu } from './Menu'
-import { InputShortcuts as Input } from './Input'
-import { RadioShortcuts as Radio } from './Radio'
+import { Card } from './Card'
 import { CheckboxShortcuts as Checkbox } from './Checkbox'
-import { BreadcrumbShortcuts as Breadcrumb } from './Breadcrumb'
-
+import { common } from './common'
+import { Divider } from './Divider'
+import { Empty } from './Empty'
+import { Icon } from './Icon'
+import { InputShortcuts as Input } from './Input'
+import { MenuShortcuts as Menu } from './Menu'
+import { RadioShortcuts as Radio } from './Radio'
+import { Space } from './Space'
+import { Switch } from './Switch'
+import { Tabs } from './Tabs'
+import { Tag } from './Tag'
 export const shortcuts = [
   common,
   Button,
@@ -27,7 +27,8 @@ export const shortcuts = [
   Tabs,
   Card,
   Empty,
-  Menu
+  Menu,
+  Icon
 ]
 
 /**

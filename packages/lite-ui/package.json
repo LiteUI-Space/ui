@@ -34,6 +34,7 @@
     "@lite-space/checkbox": "workspace:*",
     "@lite-space/divider": "workspace:*",
     "@lite-space/empty": "workspace:*",
+    "@lite-space/icon": "workspace:*",
     "@lite-space/input": "workspace:*",
     "@lite-space/menu": "workspace:*",
     "@lite-space/radio": "workspace:*",
