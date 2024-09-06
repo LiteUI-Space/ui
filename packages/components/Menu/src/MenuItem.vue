@@ -48,14 +48,14 @@
     <template v-if="isTitle">
       <div class="lt-subMenuItem-title" @click.stop="handleOpen">
         <div class="flex items-center w-full">
-          <template v-if="isIcon || $slots.icon">
-            <span v-if="$slots.icon" class="lt-subMenuItem-title-icon"><slot name="icon" /></span>
-            <span v-else class="lt-subMenuItem-title-icon" :class="icon" />
-          </template>
+          <span v-if="$slots.icon" class="lt-subMenuItem-title-icon"><slot name="icon" /></span>
+          <span v-else-if="isIcon" class="lt-subMenuItem-title-icon" :class="icon" />
+
           <slot name="title">
             {{ title }}
           </slot>
         </div>
+
         <div class="flex-center">
           <IconArrowDown
             class="w-5 h-5 text-gray-400 transition"
@@ -70,10 +70,8 @@
       </ul>
     </template>
     <template v-else>
-      <template v-if="isIcon || $slots.icon">
-        <span v-if="isIcon" class="lt-subMenuItem-title-icon" :class="icon" />
-        <span v-else class="lt-subMenuItem-title-icon"><slot name="icon" /></span>
-      </template>
+      <span v-if="isIcon" class="lt-subMenuItem-title-icon" :class="icon" />
+      <span v-else-if="$slots.icon" class="lt-subMenuItem-title-icon"><slot name="icon" /></span>
       <slot />
     </template>
   </li>
