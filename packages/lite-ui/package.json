@@ -35,6 +35,7 @@
     "@lite-space/divider": "workspace:*",
     "@lite-space/empty": "workspace:*",
     "@lite-space/input": "workspace:*",
+    "@lite-space/menu": "workspace:*",
     "@lite-space/radio": "workspace:*",
     "@lite-space/space": "workspace:*",
     "@lite-space/switch": "workspace:*",

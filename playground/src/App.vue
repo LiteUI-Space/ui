@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import Empty from './components/Empty.vue'
+  import Menu from './components/Menu.vue'
   import SizeBtns from './components/SizeBtns.vue'
 
   import { ref, watch } from 'vue'
@@ -18,5 +18,5 @@
   <!-- <Radio /> -->
   <!-- <Checkbox /> -->
   <!-- <Card /> -->
-  <Empty />
+  <Menu />
 </template>

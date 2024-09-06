@@ -7,6 +7,7 @@ import { common } from './common'
 import { Button } from './Button'
 import { Switch } from './Switch'
 import { Divider } from './Divider'
+import { MenuShortcuts as Menu } from './Menu'
 import { InputShortcuts as Input } from './Input'
 import { RadioShortcuts as Radio } from './Radio'
 import { CheckboxShortcuts as Checkbox } from './Checkbox'
@@ -25,7 +26,8 @@ export const shortcuts = [
   Breadcrumb,
   Tabs,
   Card,
-  Empty
+  Empty,
+  Menu
 ]
 
 /**
