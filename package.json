@@ -1,6 +1,7 @@
 {
   "name": "lite-ui-monorepo",
   "type": "module",
+  "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@9.4.0",
   "description": "A Vue3 based UnoCSS UI library.",
@@ -29,7 +30,7 @@
     "dev": "pnpm build:utils && pnpm dev:theme && pnpm build:ui",
     "dev:theme": "pnpm run -C packages/theme stub",
     "build:docs": "pnpm dev && pnpm run -C docs build",
-    "build": "pnpm build:utils && pnpm build:theme && pnpm -r --filter ./packages/components/** run build && pnpm build:ui",
+    "build": "pnpm build:utils && pnpm build:theme && pnpm --filter ./packages/components/**  build && pnpm build:ui",
     "build:ui": "pnpm run -C packages/lite-ui build",
     "build:utils": "pnpm run -C packages/utils build",
     "build:theme": "pnpm run -C packages/theme build",
@@ -54,6 +55,5 @@
     "eslint": "^9.5.0",
     "esno": "^4.7.0",
     "typescript": "^5.2.2"
-  },
-  "version": "0.0.1"
+  }
 }

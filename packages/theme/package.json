@@ -1,7 +1,7 @@
 {
   "name": "@lite-space/theme",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "unocss preset for lite-ui",
   "author": "AntzyMo <mozbano@163.com>",
   "license": "MIT",
