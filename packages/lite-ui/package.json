@@ -1,7 +1,7 @@
 {
   "name": "@lite-space/ui",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "A Vue3 based UnoCSS UI library.",
   "author": "AntzyMo <mozbano@163.com>",
   "license": "MIT",
