@@ -3,7 +3,6 @@
 
   const route = useRoute()
   const { data: page, error } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
-  const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
   const url = useRequestURL()
 </script>
 
@@ -11,29 +10,27 @@
   <div flex="~" class="gap-10">
     <template v-if="page?.title">
       <aside class="sticky top-14 z-1">
-        <template v-for="item in navigation" :key="item._path">
-          <Menu :model-value="url.pathname" open>
-            <MenuItem v-for="it in item.children" :key="it._path" :value="it._path">
-              <template #title>
-                <h3 class="text-sm font-bold">
-                  {{ it.title }}
-                </h3>
-              </template>
-              <MenuItem
-                v-for="t in it.children"
-                :key="t._path"
-                :value="t._path"
+        <Menu :model-value="url.pathname" open>
+          <MenuItem v-for="item in toc" :key="item.title" :value="item.title">
+            <template #title>
+              <h3 class="text-sm font-bold">
+                {{ item.title }}
+              </h3>
+            </template>
+            <MenuItem
+              v-for="it in item.children"
+              :key="it.path"
+              :value="it.path"
+            >
+              <NuxtLink
+                :to="it.path"
+                class="w-full hover:text-gray-800 text-sm text-gray-600"
               >
-                <NuxtLink
-                  :to="t._path"
-                  class="w-full hover:text-gray-800 text-sm text-gray-600"
-                >
-                  {{ t.title }}
-                </NuxtLink>
-              </MenuItem>
+                {{ it.title }}
+              </NuxtLink>
             </MenuItem>
-          </Menu>
-        </template>
+          </MenuItem>
+        </Menu>
       </aside>
       <main class="relative">
         <Breadcrumb class="" :items="['Docs', page.title]" separator="i-carbon:chevron-right" />

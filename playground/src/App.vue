@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import Menu from './components/Menu.vue'
+  import Icon from './components/Icon.vue'
   import SizeBtns from './components/SizeBtns.vue'
 
   import { ref, watch } from 'vue'
@@ -12,12 +12,5 @@
 
 <template>
   <SizeBtns v-model="size" />
-  <!-- <Input /> -->
-  <!-- <Drivide /> -->
-  <!-- <Space :size="size" /> -->
-  <!-- <Radio /> -->
-  <!-- <Checkbox /> -->
-  <!-- <Card /> -->
-  <Menu />
-  <!-- <Icon /> -->
+  <Icon />
 </template>
