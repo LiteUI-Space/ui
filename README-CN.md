@@ -50,5 +50,13 @@ export default defineConfig({
 ## 贡献指南
 如果在使用过程中发现问题，欢迎提交 [issue](https://github.com/AntzyMo/vue-day-calendar/issues) 或 **pull request** 并第一时间解决，如果喜欢的话，欢迎 **star** 一下。
 
+## 感谢
+- [unocss](https://unocss.dev/)
+- [ikun-ui](https://ikun-ui.netlify.app/)
+- [element-plus](https://element-plus.org/)
+- [ant-design-vue](https://www.antdv.com/components/overview)
+- [layui-vue](https://www.layui-vue.com/zh-CN/index)
+- [shadcn/ui](https://ui.shadcn.com/)
+
 ## License
 [MIT](./LICENSE) License &copy; 2024-PRESENT [AntzyMo](https://github.com/AntzyMo)
