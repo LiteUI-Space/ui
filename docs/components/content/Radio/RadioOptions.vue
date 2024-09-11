@@ -18,7 +18,7 @@
 <template>
   <RadioGroup v-model="checkval" :options="options" @change="handleChange" />
   <br>
-  <RadioGroup v-model="checkval1 " :options="options1" @change="handleChange" />
+  <RadioGroup v-model="checkval1" :options="options1" @change="handleChange" />
   <br>
   <RadioGroup v-model="checkval2" :options="options2" @change="handleChange" />
 </template>

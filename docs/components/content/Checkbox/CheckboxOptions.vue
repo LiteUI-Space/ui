@@ -18,7 +18,7 @@
 <template>
   <CheckboxGroup v-model="checkval" :options="options" />
   <br>
-  <CheckboxGroup v-model="checkval1 " :options="options1" @change="handleChange" />
+  <CheckboxGroup v-model="checkval1" :options="options1" @change="handleChange" />
   <br>
   <CheckboxGroup v-model="checkval2" :options="options2" />
 </template>
