@@ -7,23 +7,23 @@ lite-space/ui
 </h1>
 
 <p align="center">
-English | <a href="README-CN.md">中文</a>
+<a href="https://github.com/LiteUI-Space/ui">English</a> | 中文
 </p>
 
 <p align="center">
-<a href="https://lite-spaceui.netlify.app">📚️ Documentation</a>
+<a href="https://lite-spaceui.netlify.app">📚️ 文档</a>
 </p>
 
-Based on the `unocss` component library `vue3` provides a concise set of components.
+基于 `unocss` 的 `vue3` 组件库，提供了一套简洁的组件。
 
-## Installation
+## 安装
 ```shell
 pnpm add unocss -D
 pnpm add @lite-space/ui
 pnpm add @lite-space/theme
 ```
 
-## configuration
+## 配置
 ```ts
 // unocss.config.ts
 import { presetLite } from '@lite-space/theme'
@@ -36,7 +36,7 @@ export default defineConfig({
 })
 ```
 
-## Example
+## 例子
 ```vue
 <script setup lang="ts">
   import { Button } from '@lite-space/ui'
@@ -47,8 +47,8 @@ export default defineConfig({
 </template>
 ```
 
-## Contribution guide
-If you encounter any problems during use, feel free to submit an [issue](https://github.com/AntzyMo/vue-day-calendar/issues) or **pull request**, and we will resolve it as soon as possible, if you like it, please **star** it.
+## 贡献指南
+如果在使用过程中发现问题，欢迎提交 [issue](https://github.com/AntzyMo/vue-day-calendar/issues) 或 **pull request** 并第一时间解决，如果喜欢的话，欢迎 **star** 一下。
 
 ## License
 [MIT](./LICENSE) License &copy; 2024-PRESENT [AntzyMo](https://github.com/AntzyMo)
