@@ -1,7 +1,7 @@
 {
   "name": "lite-ui-monorepo",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "packageManager": "pnpm@9.4.0",
   "description": "A Vue3 based UnoCSS UI library.",
@@ -35,11 +35,12 @@
     "build:utils": "pnpm run -C packages/utils build",
     "build:theme": "pnpm run -C packages/theme build",
     "play": "pnpm run -C playground dev",
-    "release": "bumpp -r",
+    "release": "bumpp --commit --tag",
     "comp": "esno scripts/create-component.ts",
     "lint:fix": "eslint . --fix",
     "lint:comp:fix": "eslint packages/lite-ui/src/**  packages/lite-ui/package.json packages/theme/src/** --fix",
-    "changeset": "changeset"
+    "changeset": "changeset",
+    "version": "changeset version"
   },
   "dependencies": {
     "chalk": "^5.3.0",
