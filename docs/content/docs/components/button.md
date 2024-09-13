@@ -11,20 +11,22 @@ description: 按钮用于开始一个即时操作
 #code
 ```vue
 <script setup lang="ts">
-  import { Button } from '@lite-space/ui'
+  import { Button, Space } from '@lite-space/ui'
 </script>
 
 <template>
-  <Button>button</Button>
-  <Button type="text">
-    Text Button
-  </Button>
-  <Button type="primary">
-    Primary Button
-  </Button>
-  <Button type="link">
-    Link button
-  </Button>
+  <Space>
+    <Button>button</Button>
+    <Button type="text">
+      Text Button
+    </Button>
+    <Button type="primary">
+      Primary Button
+    </Button>
+    <Button type="link">
+      Link button
+    </Button>
+  </Space>
 </template>
 ```
 ::
@@ -60,22 +62,24 @@ description: 按钮用于开始一个即时操作
 #code
 ```vue
 <script setup lang="ts">
-  import { Button } from '@lite-space/ui'
+  import { Button, Space } from '@lite-space/ui'
 </script>
 
 <template>
-  <Button danger>
-    button
-  </Button>
-  <Button type="text" danger>
-    Text Button
-  </Button>
-  <Button type="primary" danger>
-    Primary Button
-  </Button>
-  <Button type="link" danger>
-    Link button
-  </Button>
+  <Space>
+    <Button danger>
+      button
+    </Button>
+    <Button type="text" danger>
+      Text Button
+    </Button>
+    <Button type="primary" danger>
+      Primary Button
+    </Button>
+    <Button type="link" danger>
+      Link button
+    </Button>
+  </Space>
 </template>
 ```
 ::
@@ -85,22 +89,24 @@ description: 按钮用于开始一个即时操作
 #code
 ```vue
 <script setup lang="ts">
-  import { Button } from '@lite-space/ui'
+  import { Button, Space } from '@lite-space/ui'
 </script>
 
 <template>
-  <Button disabled>
-    button
-  </Button>
-  <Button type="text" disabled>
-    Text Button
-  </Button>
-  <Button type="primary" disabled>
-    Primary Button
-  </Button>
-  <Button type="link" disabled>
-    Link button
-  </Button>
+  <Space>
+    <Button disabled>
+      button
+    </Button>
+    <Button type="text" disabled>
+      Text Button
+    </Button>
+    <Button type="primary" disabled>
+      Primary Button
+    </Button>
+    <Button type="link" disabled>
+      Link button
+    </Button>
+  </Space>
 </template>
 ```
 ::
@@ -165,33 +171,34 @@ description: 按钮用于开始一个即时操作
 #code
 ```vue
 <script setup lang="ts">
-  import { Button } from '@lite-space/ui'
+  import { Button, Space } from '@lite-space/ui'
 </script>
 
 <template>
-  <Button auto-insert-space>
-    取消
-  </Button>
-
-  <Button
-    type="primary"
-    auto-insert-space
-  >
-    确认
-  </Button>
-  <Button
-    type="primary"
-  >
-    确认了吗?
-  </Button>
-  <Button
-    type="primary"
-  >
-    <div>
-      <span>span</span>
-      <span>test</span>
-    </div>
-  </Button>
+  <Space>
+    <Button auto-insert-space>
+      取消
+    </Button>
+    <Button
+      type="primary"
+      auto-insert-space
+    >
+      确认
+    </Button>
+    <Button
+      type="primary"
+    >
+      确认了吗?
+    </Button>
+    <Button
+      type="primary"
+    >
+      <div>
+        <span>span</span>
+        <span>test</span>
+      </div>
+    </Button>
+  </Space>
 </template>
 ```
 ::

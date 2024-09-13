@@ -1,10 +1,17 @@
 <script setup lang="ts">
   import { Button, Space } from '@lite-space/ui'
 
+  const route = useRoute()
   const navList = [
     { name: 'Docs', path: '/docs' },
-    { name: 'Components', path: '/docs/components' }
+    { name: 'Components', path: '/docs/components/button' }
   ]
+
+  const routePath = toRef(route, 'path')
+
+  function sliceSecondOfPath(path: string) {
+    return `/${path.split('/').slice(0, 3).filter(Boolean).join('/')}`
+  }
 </script>
 
 <template>
@@ -25,6 +32,9 @@
               v-for="item in navList"
               :key="item.path"
               class="text-sm text-gray-700/80 transition hover:text-gray-800"
+              :class="{
+                'text-gray-900!': sliceSecondOfPath(item.path) === sliceSecondOfPath(routePath),
+              }"
               :to="item.path"
             >
               {{ item.name }}
