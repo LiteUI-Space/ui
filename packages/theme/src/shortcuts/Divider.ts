@@ -1,5 +1,5 @@
 export const Divider = {
-  'lt-divider': 'relative m-0 p-0 clear-both border-gray-200',
+  'lt-divider': 'relative inline-block m-0 p-0 clear-both border-gray-200',
   'lt-divider-text': 'px-2 absolute -translate-y-52% bg-white',
   // divider type
   'lt-divider--horizontal': 'my-4 h-1px w-full border-t lt-divider--horizontal-solid',
