@@ -22,7 +22,9 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "global.d.ts",
+    "package.json"
   ],
   "scripts": {
     "build": "unbuild"

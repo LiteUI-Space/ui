@@ -3,8 +3,8 @@ export { default as RadioGroup } from './RadioGroup.vue'
 export type {
   RadioChangeEvent,
   RadioGroupChangeEvent,
-  RadioProps,
+  RadioGroupInstance,
   RadioGroupProps,
   RadioInstance,
-  RadioGroupInstance
+  RadioProps
 } from './types'
