@@ -85,3 +85,33 @@ description: 区隔内容的分割线。
 </template>
 ```
 ::
+
+::CodePreview{title="自定义间距" src="DividerMargin"}
+可以使用 `margin` 自定义间距。
+#code
+```vue
+<script setup lang="ts">
+  import { Divider, Space } from '@lite-space/ui'
+</script>
+
+<template>
+  <Space direction="vertical">
+    <div text-sm>
+      <span>Text</span>
+      <Divider :margin="12" />
+      <a href="#">Link</a>
+      <Divider margin="16px" dashed />
+      <a href="#">Link</a>
+    </div>
+
+    <div text-sm>
+      <span>Text</span>
+      <Divider :margin="12" type="vertical" />
+      <a href="#">Link</a>
+      <Divider margin="16px" type="vertical" dashed />
+      <a href="#">Link</a>
+    </div>
+  </Space>
+</template>
+```
+::

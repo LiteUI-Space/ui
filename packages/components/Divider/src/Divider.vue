@@ -1,13 +1,21 @@
 <script setup lang="ts">
   import type { DividerProps } from './types'
 
+  import { computed } from 'vue'
+
   defineOptions({
     name: 'LtDivider'
   })
 
-  const props = withDefaults(defineProps<DividerProps>(), {
-    type: 'horizontal',
-    orientation: 'center'
+  const { type = 'horizontal', orientation = 'center', margin = '' } = defineProps<DividerProps>()
+  const customSizeStyle = computed(() => {
+    if (!margin)
+      return null
+
+    const size = Number.isNaN(Number(margin)) ? margin : `${margin}px`
+    return type === 'horizontal'
+      ? { marginBlock: size }
+      : { marginInline: size }
   })
 </script>
 
@@ -15,9 +23,10 @@
   <div
     class="lt-divider"
     :class="[
-      `lt-divider--${props.type}`,
-      props.dashed && `lt-divider--${props.type}-dashed`,
+      `lt-divider--${type}`,
+      dashed && `lt-divider--${type}-dashed`,
     ]"
+    :style="customSizeStyle"
   >
     <div
       v-if="$slots.default && type !== 'vertical'"
