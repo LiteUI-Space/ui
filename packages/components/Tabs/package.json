@@ -1,7 +1,7 @@
 {
   "name": "@lite-space/tabs",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "vue3",
     "component",
@@ -22,6 +22,9 @@
     "dist",
     "package.json"
   ],
+  "engines": {
+    "vue": ">=3.5.0"
+  },
   "scripts": {
     "build": "mkdist -d"
   },

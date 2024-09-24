@@ -1,5 +1,25 @@
 # @lite-space/ui
 
+## 0.1.7
+
+### Patch Changes
+
+- update vue version >=3.5.0
+- Updated dependencies
+  - @lite-space/breadcrumb@0.0.3
+  - @lite-space/button@0.0.3
+  - @lite-space/card@0.0.3
+  - @lite-space/checkbox@0.0.3
+  - @lite-space/empty@0.0.3
+  - @lite-space/icon@0.0.3
+  - @lite-space/input@0.0.4
+  - @lite-space/menu@0.0.3
+  - @lite-space/radio@0.0.3
+  - @lite-space/space@0.0.3
+  - @lite-space/switch@0.0.3
+  - @lite-space/tabs@0.0.3
+  - @lite-space/tag@0.0.3
+
 ## 0.1.6
 
 ### Patch Changes
