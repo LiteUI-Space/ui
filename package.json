@@ -45,6 +45,7 @@
   "dependencies": {
     "chalk": "^5.3.0",
     "execa": "^9.3.0",
+    "nuxt": "^3.12.4",
     "ora": "^8.0.1"
   },
   "devDependencies": {

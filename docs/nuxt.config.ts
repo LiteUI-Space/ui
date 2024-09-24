@@ -8,5 +8,8 @@ export default defineNuxtConfig({
       theme: 'vitesse-light'
     }
   },
-  compatibilityDate: '2024-08-13'
+  compatibilityDate: '2024-08-13',
+  vue: {
+    propsDestructure: true
+  }
 })

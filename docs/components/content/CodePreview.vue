@@ -6,12 +6,7 @@
     title: string
   }>()
 
-  // const route = useRoute()
   const comp = resolveComponent(props.src)
-
-  // const compDir = route.params.slug.at(-1)
-  // const src = `${compDir}/${props.src}.vue`
-  // const { data } = await useFetch(`/api/demoCode?src=${src}`)
 </script>
 
 <template>
@@ -27,7 +22,6 @@
         <ContentSlot />
 
         <ContentSlot :use="$slots.code" />
-        <!-- <textarea v-model="data.code" class="w-full h-200px" /> -->
       </div>
     </div>
   </div>
