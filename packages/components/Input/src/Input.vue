@@ -90,6 +90,7 @@
         :class="{
           'lt-input--disabled': disabled,
           'lt-input--password': password,
+          'lt-input-small--inner': size === 'small',
         }"
         :disabled="disabled"
         :placeholder="placeholder"

@@ -1,5 +1,5 @@
 const Input = {
-  'lt-input': 'inline-flex align-middle',
+  'lt-input': 'inline-flex align-middle w-full bg-white',
   'lt-input-wrapper': 'flex w-full flex-1 gap-1 px-2 py-1 items-center rounded-md lt-input-border lt-input--focus',
   'lt-input-inner': 'outline-none border-none  text-sm w-full placeholder:text-zinc-400',
   'lt-input-border': 'border border-solid border-gray-200 transition ',
@@ -7,6 +7,7 @@ const Input = {
   'lt-input-small': 'h-7',
   'lt-input-default': 'h-8',
   'lt-input-large': 'h-9',
+  'lt-input-small--inner': 'text-xs placeholder:text-xs',
 
   // input hover
   'lt-input--hover': 'hover:border-gray-300',
@@ -43,12 +44,13 @@ const InputPassowrd = {
 }
 
 const TextArea = {
-  'lt-textarea': 'inline-flex relative rounded-md lt-input-border lt-input--focus bg-white',
-  'lt-textarea-inner': 'px-2 py-2 outline-none leading-5 border-none flex-1 placeholder:text-zinc-400 resize-y',
+  'lt-textarea': 'inline-flex w-full align-middle relative rounded-md lt-input-border lt-input--focus bg-white',
+  'lt-textarea-inner': 'px-2 py-2 outline-none leading-5 border-none rounded-md flex-1 text-sm placeholder:text-zinc-400 resize-y',
   // textArea size
   'lt-textarea-small': 'min-h-6',
   'lt-textarea-default': 'min-h-7',
   'lt-textarea-large': 'min-h-8',
+  'lt-textarea-small--inner': 'text-xs placeholder:text-xs',
 
   // textArea resize none
   'lt-textarea--resize-none': 'resize-none',

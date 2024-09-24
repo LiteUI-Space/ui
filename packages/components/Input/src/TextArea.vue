@@ -57,6 +57,7 @@
         {
           'lt-textarea--resize-none': !resize,
           'lt-textarea--disabled': disabled,
+          'lt-input-small--inner': size === 'small',
         },
       ]"
       :placeholder="placeholder"
