@@ -14,7 +14,6 @@ const upperCaseCompName = compName.replace(compName[0], compName[0].toUpperCase(
 const lowerCaseCompName = compName.replace(compName[0], compName[0].toLowerCase())
 
 const _dirname = fileURLToPath(new URL('../packages', import.meta.url))
-const pkgVersion = liteuiPkg.version
 
 writeUnoConfig()
 createComponent()
@@ -60,7 +59,7 @@ async function writePkgJSON(baseUrl: string) {
   const pkgContent = `{
   "name": "@lite-space/${lowerCaseCompName}",
   "type": "module",
-  "version": "${pkgVersion}",
+  "version": "0.0.0",
   "keywords": [
     "vue3",
     "component",
