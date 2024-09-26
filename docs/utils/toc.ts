@@ -76,6 +76,10 @@ export const toc: Toc[] = [
       {
         title: 'Menu 菜单',
         path: '/docs/components/menu'
+      },
+      {
+        title: 'Badge 徽标数',
+        path: '/docs/components/badge'
       }
     ]
   }

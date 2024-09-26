@@ -33,6 +33,7 @@
     "build": "unbuild"
   },
   "dependencies": {
+    "@lite-space/badge": "workspace:*",
     "@lite-space/breadcrumb": "workspace:*",
     "@lite-space/button": "workspace:*",
     "@lite-space/card": "workspace:*",

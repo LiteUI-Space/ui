@@ -1,6 +1,6 @@
 import { rules } from './rules'
 import { definePreset } from 'unocss'
-import { generateSafelist, shortcuts } from './shortcuts';
+import { generateSafelist, shortcuts } from './shortcuts'
 
 export const presetLite = definePreset(() => {
   return {
