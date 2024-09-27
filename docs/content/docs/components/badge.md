@@ -11,24 +11,24 @@ description: 图标右上角的圆形徽标数字
 #code
 ```vue
 <script setup lang="ts">
-  import { Badge, Space } from '@lite-space/ui'
+  import { Avatar, Badge, Space } from '@lite-space/ui'
 </script>
 
 <template>
   <Space :size="20">
     <Badge value="25">
-      <div class="w-40px h-40px bg-gray-300 rounded-md" />
+      <Avatar shape="square" size="large" />
     </Badge>
 
     <Badge value="0" show-zero>
-      <div class="w-40px h-40px bg-gray-300 rounded-md" />
+      <Avatar shape="square" size="large" />
     </Badge>
 
     <Badge>
       <template #value>
         slot
       </template>
-      <div class="w-40px h-40px bg-gray-300 rounded-md" />
+      <Avatar shape="square" size="large" />
     </Badge>
     <Badge dot />
   </space>
@@ -61,12 +61,12 @@ description: 图标右上角的圆形徽标数字
 #code
 ```vue
 <script setup lang="ts">
-  import { Badge } from '@lite-space/ui'
+  import { Avatar, Badge } from '@lite-space/ui'
 </script>
 
 <template>
   <Badge value="100" :max="99">
-    <div class="w-40px h-40px bg-gray-300 rounded-md" />
+    <Avatar shape="square" size="large" />
   </Badge>
 </template>
 ```
@@ -78,12 +78,12 @@ description: 图标右上角的圆形徽标数字
 #code
 ```vue
 <script setup lang="ts">
-  import { Badge } from '@lite-space/ui'
+  import { Avatar, Badge } from '@lite-space/ui'
 </script>
 
 <template>
   <Badge value="25" :offset="[10, 5]">
-    <div class="w-40px h-40px bg-gray-300 rounded-md" />
+    <Avatar shape="square" size="large" />
   </Badge>
 </template>
 ```
