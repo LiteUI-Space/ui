@@ -22,5 +22,6 @@
 <style scoped>
 .lt-avatar-group > * + * {
   margin-left: -8px;
+  box-shadow: 0 0 0 1px #fff;
 }
 </style>

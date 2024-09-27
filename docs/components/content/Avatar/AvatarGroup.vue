@@ -8,7 +8,7 @@
     <Avatar class="bg-orange">
       U
     </Avatar>
-    <Avatar class="bg-green" />
+    <Avatar class="bg-green" icon="i-carbon:user" />
   </AvatarGroup>
   <Divider />
   <AvatarGroup size="large">
@@ -16,7 +16,7 @@
     <Avatar class="bg-orange">
       U
     </Avatar>
-    <Avatar class="bg-green" />
+    <Avatar class="bg-green" icon="i-carbon:user" />
   </AvatarGroup>
   <Divider />
   <AvatarGroup shape="square">
@@ -24,6 +24,6 @@
     <Avatar class="bg-orange">
       U
     </Avatar>
-    <Avatar class="bg-green" />
+    <Avatar class="bg-green" icon="i-carbon:user" />
   </AvatarGroup>
 </template>

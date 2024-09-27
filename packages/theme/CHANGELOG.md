@@ -1,5 +1,12 @@
 # @lite-space/theme
 
+## 0.2.1
+
+### Patch Changes
+
+- @lite-space/icon remove IconUser
+  @lite-space/avatar update
+
 ## 0.2.0
 
 ### Minor Changes

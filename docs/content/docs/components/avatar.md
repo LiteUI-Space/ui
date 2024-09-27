@@ -17,17 +17,17 @@ description: 用来代表用户或事物，支持图片、图标或字符展示
 <template>
   <Space direction="vertical" :size="20">
     <Space :size="20">
-      <Avatar :size="64" />
-      <Avatar size="large" />
-      <Avatar />
-      <Avatar size="small" />
+      <Avatar :size="64" icon="i-carbon:user" />
+      <Avatar size="large" icon="i-carbon:user" />
+      <Avatar icon="i-carbon:user" />
+      <Avatar size="small" icon="i-carbon:user" />
     </Space>
 
     <Space :size="20">
-      <Avatar shape="square" :size="64" />
-      <Avatar shape="square" size="large" />
-      <Avatar shape="square" />
-      <Avatar shape="square" size="small" />
+      <Avatar shape="square" :size="64" icon="i-carbon:user" />
+      <Avatar shape="square" size="large" icon="i-carbon:user" />
+      <Avatar shape="square" icon="i-carbon:user" />
+      <Avatar shape="square" size="small" icon="i-carbon:user" />
     </Space>
   </space>
 </template>
@@ -45,7 +45,7 @@ description: 用来代表用户或事物，支持图片、图标或字符展示
 
 <template>
   <Space :size="20">
-    <Avatar />
+    <Avatar icon="i-carbon:user" />
     <Avatar icon="i-carbon:bot" />
     <Avatar>U</Avatar>
     <Avatar>USER</Avatar>
@@ -74,7 +74,7 @@ description: 用来代表用户或事物，支持图片、图标或字符展示
     <Avatar class="bg-orange">
       U
     </Avatar>
-    <Avatar class="bg-green" />
+    <Avatar class="bg-green" icon="i-carbon:user" />
   </AvatarGroup>
   <Divider />
   <AvatarGroup size="large">
@@ -82,7 +82,7 @@ description: 用来代表用户或事物，支持图片、图标或字符展示
     <Avatar class="bg-orange">
       U
     </Avatar>
-    <Avatar class="bg-green" />
+    <Avatar class="bg-green" icon="i-carbon:user" />
   </AvatarGroup>
   <Divider />
   <AvatarGroup shape="square">
@@ -90,7 +90,7 @@ description: 用来代表用户或事物，支持图片、图标或字符展示
     <Avatar class="bg-orange">
       U
     </Avatar>
-    <Avatar class="bg-green" />
+    <Avatar class="bg-green" icon="i-carbon:user" />
   </AvatarGroup>
 </template>
 ```

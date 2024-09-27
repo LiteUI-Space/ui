@@ -1,7 +1,7 @@
 {
   "name": "@lite-space/avatar",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [
     "vue3",
     "component",
@@ -29,7 +29,6 @@
     "build": "mkdist -d"
   },
   "dependencies": {
-    "@lite-space/icon": "workspace:*",
     "@lite-space/utils": "workspace:*",
     "@vueuse/core": "^10.11.1"
   },

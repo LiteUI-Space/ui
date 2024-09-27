@@ -4,7 +4,7 @@
 
 <template>
   <Space :size="20">
-    <Avatar />
+    <Avatar icon="i-carbon:user" />
     <Avatar icon="i-carbon:bot" />
     <Avatar>U</Avatar>
     <Avatar>USER</Avatar>

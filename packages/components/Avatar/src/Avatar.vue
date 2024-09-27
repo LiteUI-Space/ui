@@ -2,7 +2,6 @@
   import type { CSSProperties } from 'vue'
   import type { AvatarProps } from './types'
 
-  import { IconUser } from '@lite-space/icon'
   import { useResizeObserver } from '@vueuse/core'
   import { computed, inject, ref, useTemplateRef } from 'vue'
 
@@ -77,6 +76,5 @@
       :class="icon"
       :style="{ fontSize: customSizeStyle?.fontSize }"
     />
-    <IconUser v-else class="lt-avatar-icon" :style="{ fontSize: customSizeStyle?.fontSize }" />
   </span>
 </template>

@@ -1,5 +1,14 @@
 # @lite-space/ui
 
+## 0.2.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @lite-space/avatar@0.0.1
+  - @lite-space/icon@0.1.1
+  - @lite-space/theme@0.2.1
+
 ## 0.2.0
 
 ### Patch Changes

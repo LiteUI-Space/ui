@@ -1,5 +1,5 @@
 const Avatar = {
-  'lt-avatar': 'inline-flex-center align-middle overflow-hidden bg-gray-200 rounded-full text-sm text-white',
+  'lt-avatar': 'inline-flex-center align-middle overflow-hidden bg-gray-300 rounded-full text-sm text-white',
 
   'lt-avatar-large': 'w-40px h-40px',
   'lt-avatar-default': 'w-8 h-8',
