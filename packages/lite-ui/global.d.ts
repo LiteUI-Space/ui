@@ -12,6 +12,7 @@ declare module 'vue'{
     Empty: typeof import('@lite-space/empty')['Empty']
     IconArrowDown: typeof import('@lite-space/icon')['IconArrowDown']
     IconEmpty: typeof import('@lite-space/icon')['IconEmpty']
+    IconUser: typeof import('@lite-space/icon')['IconUser']
     Input: typeof import('@lite-space/input')['Input']
     InputPassword: typeof import('@lite-space/input')['InputPassword']
     TextArea: typeof import('@lite-space/input')['TextArea']
@@ -24,5 +25,8 @@ declare module 'vue'{
     Tabs: typeof import('@lite-space/tabs')['Tabs']
     TabPane: typeof import('@lite-space/tabs')['TabPane']
     Tag: typeof import('@lite-space/tag')['Tag']
+    Badge: typeof import('@lite-space/badge')['badge']
+    Avatar: typeof import('@lite-space/avatar')['Avatar']
+    AvatarGroup: typeof import('@lite-space/avatar')['AvatarGroup']
   }
 }

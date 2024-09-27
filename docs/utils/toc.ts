@@ -80,6 +80,10 @@ export const toc: Toc[] = [
       {
         title: 'Badge 徽标数',
         path: '/docs/components/badge'
+      },
+      {
+        title: 'Avatar 头像',
+        path: '/docs/components/avatar'
       }
     ]
   }

@@ -12,6 +12,7 @@ import { Divider } from './Divider'
 import { MenuShortcuts as Menu } from './Menu'
 import { InputShortcuts as Input } from './Input'
 import { RadioShortcuts as Radio } from './Radio'
+import { AvatarShortcuts as Avatar } from './Avatar'
 import { CheckboxShortcuts as Checkbox } from './Checkbox'
 import { BreadcrumbShortcuts as Breadcrumb } from './Breadcrumb'
 
@@ -31,7 +32,8 @@ export const shortcuts = [
   Empty,
   Menu,
   Icon,
-  Badge
+  Badge,
+  Avatar
 ]
 
 /**

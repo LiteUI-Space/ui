@@ -1,3 +1,4 @@
+export * from '@lite-space/avatar'
 export * from '@lite-space/badge'
 export * from '@lite-space/breadcrumb'
 export * from '@lite-space/button'
