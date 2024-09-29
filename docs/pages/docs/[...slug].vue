@@ -10,7 +10,7 @@
   <div flex="~" class="gap-10">
     <template v-if="page?.title">
       <aside class="sticky top-14 z-1">
-        <Menu :model-value="url.pathname" open>
+        <Menu :model-value="url.pathname" open @change="path => $router.push(path)">
           <MenuItem v-for="item in toc" :key="item.title" :value="item.title">
             <template #title>
               <h3 class="text-sm font-bold">
