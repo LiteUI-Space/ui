@@ -80,9 +80,6 @@ async function writePkgJSON(baseUrl: string) {
     "dist",
     "package.json"
   ],
-  "engines": {
-    "vue": ">=3.5.0"
-  },
   "scripts": {
     "build": "mkdist -d"
   },
@@ -90,7 +87,7 @@ async function writePkgJSON(baseUrl: string) {
     "@vue/tsconfig": "^0.5.1",
     "mkdist": "^1.5.4",
     "typescript": "^5.2.2",
-    "vue": "^3.4.30"
+    "vue": "^3.5.9"
   }
 }
 `

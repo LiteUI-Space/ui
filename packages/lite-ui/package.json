@@ -26,9 +26,6 @@
     "global.d.ts",
     "package.json"
   ],
-  "engines": {
-    "vue": ">=3.5.0"
-  },
   "scripts": {
     "build": "unbuild"
   },
