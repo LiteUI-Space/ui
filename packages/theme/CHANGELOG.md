@@ -1,5 +1,11 @@
 # @lite-space/theme
 
+## 0.2.2
+
+### Patch Changes
+
+- - @lite-space/theme remove menu mb-2px
+
 ## 0.2.1
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @lite-space/ui
 
+## 0.2.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @lite-space/theme@0.2.2
+
 ## 0.2.1
 
 ### Patch Changes
