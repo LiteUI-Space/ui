@@ -3,7 +3,7 @@ const Menu = {
 }
 
 const MenuItem = {
-  'lt-menuItem': 'text-sm list-none flex gap-1 mb-2px items-center align-middle rounded-md',
+  'lt-menuItem': 'text-sm list-none flex gap-1 items-center align-middle rounded-md',
   'lt-menuItem-other': 'hover:bg-gray-50 px-2 py-1',
   'lt-subMenuItem': 'flex-col justify-center items-start',
   'lt-subMenuItem-title': 'flex w-full box-border py-1 rounded-md items-center justify-between px-2 hover:bg-gray-50',
