@@ -28,5 +28,8 @@ declare module 'vue'{
     Badge: typeof import('@lite-space/badge')['badge']
     Avatar: typeof import('@lite-space/avatar')['Avatar']
     AvatarGroup: typeof import('@lite-space/avatar')['AvatarGroup']
+    Popover: typeof import('@lite-space/popover')['Popover']
+    Popconfirm: typeof import('@lite-space/popconfirm')['Popconfirm']
+    Tooltip: typeof import('@lite-space/tooltip')['Tooltip']
   }
 }
