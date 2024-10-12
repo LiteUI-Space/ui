@@ -9,6 +9,8 @@ import { Button } from './Button'
 import { common } from './common'
 import { Switch } from './Switch'
 import { Divider } from './Divider'
+import { Popover } from './Popover'
+import { Tooltip } from './Tooltip'
 import { MenuShortcuts as Menu } from './Menu'
 import { InputShortcuts as Input } from './Input'
 import { RadioShortcuts as Radio } from './Radio'
@@ -33,7 +35,9 @@ export const shortcuts = [
   Menu,
   Icon,
   Badge,
-  Avatar
+  Avatar,
+  Popover,
+  Tooltip
 ]
 
 /**

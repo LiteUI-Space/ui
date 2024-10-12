@@ -1,5 +1,12 @@
 # @lite-space/theme
 
+## 0.3.0
+
+### Minor Changes
+
+- @lite-space/tooltip@0.0.0
+  @lite-space/popover@0.0.0
+
 ## 0.2.2
 
 ### Patch Changes

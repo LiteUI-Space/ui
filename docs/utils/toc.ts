@@ -84,6 +84,14 @@ export const toc: Toc[] = [
       {
         title: 'Avatar 头像',
         path: '/docs/components/avatar'
+      },
+      {
+        title: 'Tooltip 文字提示',
+        path: '/docs/components/tooltip'
+      },
+      {
+        title: 'Popover 气泡卡片',
+        path: '/docs/components/popover'
       }
     ]
   }
