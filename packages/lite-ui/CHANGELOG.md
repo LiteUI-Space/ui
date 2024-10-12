@@ -1,5 +1,16 @@
 # @lite-space/ui
 
+## 0.4.0
+
+### Minor Changes
+
+- @lite-space/popconfirm@0.0.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @lite-space/theme@0.4.0
+
 ## 0.3.0
 
 ### Minor Changes

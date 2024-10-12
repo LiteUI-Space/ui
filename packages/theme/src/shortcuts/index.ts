@@ -11,6 +11,7 @@ import { Switch } from './Switch'
 import { Divider } from './Divider'
 import { Popover } from './Popover'
 import { Tooltip } from './Tooltip'
+import { Popconfirm } from './Popconfirm'
 import { MenuShortcuts as Menu } from './Menu'
 import { InputShortcuts as Input } from './Input'
 import { RadioShortcuts as Radio } from './Radio'
@@ -37,7 +38,8 @@ export const shortcuts = [
   Badge,
   Avatar,
   Popover,
-  Tooltip
+  Tooltip,
+  Popconfirm
 ]
 
 /**

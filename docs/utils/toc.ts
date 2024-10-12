@@ -92,6 +92,10 @@ export const toc: Toc[] = [
       {
         title: 'Popover 气泡卡片',
         path: '/docs/components/popover'
+      },
+      {
+        title: 'Popconfirm 气泡确认框',
+        path: '/docs/components/popconfirm'
       }
     ]
   }
