@@ -11,7 +11,7 @@
 </script>
 
 <template>
-  <Tooltip :offset="offset" v-bind="restProps">
+  <Tooltip v-bind="restProps" :offset="offset">
     <slot />
     <template #content>
       <div class="lt-popover">

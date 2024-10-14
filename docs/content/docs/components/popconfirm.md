@@ -28,6 +28,31 @@ description: 点击元素，弹出气泡式的确认框。
 ```
 ::
 
+::CodePreview{title="自定义 Icon 图标" src="PopconfirmIcon"}
+使用 `icon` 自定义提示 `icon`。
+
+#code
+```vue
+<script setup lang="ts">
+  import { Button, Popconfirm } from '@lite-space/ui'
+</script>
+
+<template>
+  <Popconfirm
+    icon="i-carbon:accessibility"
+    title="Delete the task"
+    description="Are you sure to delete this task?"
+    ok-text="Yes"
+    cancel-text="No"
+  >
+    <Button danger>
+      Delete
+    </Button>
+  </Popconfirm>
+</template>
+```
+::
+
 ::CodePreview{title="位置" src="PopconfirmPlacement"}
 位置有 12 个方向。
 

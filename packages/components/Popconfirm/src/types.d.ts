@@ -7,6 +7,7 @@ interface LtPopconfirmProps extends Pick<TooltipProps, 'placement'> {
   cancelText: string
   icon: string
   showCancel: boolean
+  disabled: boolean
 }
 
 export type PopconfirmProps = Partial<LtPopconfirmProps>

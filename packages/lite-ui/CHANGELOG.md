@@ -1,5 +1,15 @@
 # @lite-space/ui
 
+## 0.4.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @lite-space/popconfirm@0.0.1
+  - @lite-space/popover@0.0.1
+  - @lite-space/tooltip@0.0.1
+  - @lite-space/theme@0.4.1
+
 ## 0.4.1
 
 ### Patch Changes

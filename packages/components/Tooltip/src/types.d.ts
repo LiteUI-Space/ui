@@ -3,6 +3,7 @@ interface LtTooltipProps {
   content: string
   trigger: 'hover' | 'click'
   offset: number
+  hideDelay: number
 }
 
 export type TooltipProps = Partial<LtTooltipProps>

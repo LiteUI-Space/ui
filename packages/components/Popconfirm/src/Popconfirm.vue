@@ -8,9 +8,7 @@
     name: 'LtPopconfirm'
   })
 
-  withDefaults(defineProps<PopconfirmProps>(), {
-    showCancel: true
-  })
+  const { showCancel = true, disabled, ...restProps } = defineProps<PopconfirmProps>()
 
   defineEmits<{
     confirm: []
@@ -22,10 +20,20 @@
     title: () => any
     description: () => any
   }>()
+
+  const open = defineModel('open', { default: false })
 </script>
 
 <template>
-  <Tooltip trigger="click" :placement="$props.placement" :offset="8">
+  <slot v-if="disabled" />
+
+  <Tooltip
+    v-else
+    v-bind="restProps"
+    v-model:open="open"
+    trigger="click"
+    :offset="8"
+  >
     <slot />
     <template #content>
       <div class="lt-popconfirm">
@@ -52,10 +60,10 @@
           </div>
         </div>
         <div class=" lt-popconfirm-buttons">
-          <Button v-if="showCancel" size="small" @click="$emit('cancel')">
+          <Button v-if="showCancel" size="small" @click.stop="open = false, $emit('cancel')">
             {{ cancelText }}
           </Button>
-          <Button size="small" type="primary" @click="$emit('confirm')">
+          <Button size="small" type="primary" @click.stop="open = false, $emit('confirm')">
             {{ okText }}
           </Button>
         </div>

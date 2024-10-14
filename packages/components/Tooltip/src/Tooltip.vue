@@ -12,49 +12,68 @@
   const props = withDefaults(defineProps<TooltipProps>(), {
     placement: 'top',
     trigger: 'hover',
-    offset: 4
+    offset: 4,
+    hideDelay: 100
   })
 
   const emit = defineEmits<{
     change: [val: boolean]
   }>()
-  const referenceRef = useTemplateRef('reference')
-  const floatingRef = useTemplateRef('floating')
 
+  const tooltipRef = useTemplateRef('tooltip')
+  const contentRef = useTemplateRef('content')
   const propsOffset = toRef(() => props.offset)
 
-  const isVisibled = props.trigger === 'hover' ? useElementHover(referenceRef) : ref(false)
-
-  if (props.trigger === 'click') {
-    onClickOutside(referenceRef, () => {
-      isVisibled.value = false
-    })
-  }
-
-  const { floatingStyles } = useFloating(referenceRef, floatingRef, {
+  const { floatingStyles } = useFloating(tooltipRef, contentRef, {
     whileElementsMounted: autoUpdate,
     placement: toRef(() => props.placement),
     middleware: computed(() => [offset(propsOffset.value), shift(), flip()])
   })
 
+  const open = defineModel('open', { default: false })
+  const isHoverTooltip = props.trigger === 'hover' ? useElementHover(tooltipRef) : ref(false)
+  const isHoverTooltipContent = props.trigger === 'hover' ? useElementHover(contentRef) : ref(false)
+
+  let timer: number | undefined
+  watch([isHoverTooltip, isHoverTooltipContent], isHovers => {
+    if (props.trigger === 'hover') {
+      if (isHovers.some(Boolean)) {
+        clearTimeout(timer)
+        timer = undefined
+        open.value = true
+      } else {
+        timer = setTimeout(() => {
+          open.value = false
+        }, props.hideDelay)
+      }
+    }
+  })
+
   function handleClick() {
     if (props.trigger === 'click')
-      isVisibled.value = !isVisibled.value
+      open.value = !open.value
   }
 
-  watch(isVisibled, val => {
+  if (props.trigger === 'click') {
+    onClickOutside(tooltipRef, () => {
+      open.value = false
+    })
+  }
+
+  watch(open, val => {
     emit('change', val)
   })
 </script>
 
 <template>
-  <div ref="reference" class="lt-tooltip" @click="handleClick">
+  <div ref="tooltip" class="lt-tooltip" @click="handleClick">
     <slot />
     <div
-      v-if="isVisibled"
-      ref="floating"
+      v-if="open"
+      ref="content"
       class="lt-tooltip-content"
       :style="floatingStyles"
+      @click.stop
     >
       <slot name="content">
         {{ content }}
