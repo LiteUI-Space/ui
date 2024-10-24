@@ -1,5 +1,5 @@
 ---
-title: Switch
+title: Switch 开关
 description: 开关选择器
 ---
 

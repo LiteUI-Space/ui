@@ -8,9 +8,11 @@ import { Badge } from './Badge'
 import { Button } from './Button'
 import { common } from './common'
 import { Switch } from './Switch'
+import { Select } from './Select'
 import { Divider } from './Divider'
 import { Popover } from './Popover'
 import { Tooltip } from './Tooltip'
+import { Dropdown } from './Dropdown'
 import { Popconfirm } from './Popconfirm'
 import { MenuShortcuts as Menu } from './Menu'
 import { InputShortcuts as Input } from './Input'
@@ -39,7 +41,9 @@ export const shortcuts = [
   Avatar,
   Popover,
   Tooltip,
-  Popconfirm
+  Popconfirm,
+  Select,
+  Dropdown
 ]
 
 /**

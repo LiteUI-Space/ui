@@ -1,7 +1,7 @@
 {
   "name": "@lite-space/menu",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [
     "vue3",
     "component",
@@ -26,7 +26,7 @@
     "build": "mkdist -d"
   },
   "dependencies": {
-    "@lite-space/icon": "workspace:*",
+    "@lite-space/dropdown": "workspace:*",
     "@lite-space/utils": "workspace:*"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 {
   "name": "@lite-space/popover",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "vue3",
     "component",
@@ -26,7 +26,8 @@
     "build": "mkdist -d"
   },
   "dependencies": {
-    "@lite-space/tooltip": "workspace:*"
+    "@floating-ui/vue": "^1.1.5",
+    "@vueuse/core": "^10.11.1"
   },
   "devDependencies": {
     "@vue/tsconfig": "^0.5.1",

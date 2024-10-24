@@ -4,8 +4,8 @@
 
   import { TabsKey } from './constants'
   import {
-    Fragment,
     computed,
+    Fragment,
     h,
     nextTick,
     onMounted,

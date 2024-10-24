@@ -96,6 +96,14 @@ export const toc: Toc[] = [
       {
         title: 'Popconfirm 气泡确认框',
         path: '/docs/components/popconfirm'
+      },
+      {
+        title: 'Dropdown 下拉菜单',
+        path: '/docs/components/dropdown'
+      },
+      {
+        title: 'Select 选择器',
+        path: '/docs/components/select'
       }
     ]
   }

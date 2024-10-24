@@ -1,36 +1,44 @@
 <script setup lang="ts">
-  import type { MenuItemProps } from './types'
+  import type { MenuBasicValue, MenuItemProps } from './types'
 
   import { computed, inject, ref } from 'vue'
   import { isUnoIcon } from '@lite-space/utils'
-  import { IconArrowDown } from '@lite-space/icon'
+  import { Dropdown } from '@lite-space/dropdown'
 
   import { menuKey } from './constants'
 
   defineOptions({
     name: 'LtMenuItem'
   })
+
   const props = defineProps<MenuItemProps>()
 
   const slot = defineSlots<{
     default: () => any
     title: () => any
     icon: () => any
+    suffix: () => any
   }>()
 
   const menu = inject(menuKey, undefined)
   const isChecked = computed(() => menu?.model.value === props.value)
   const isIcon = computed(() => isUnoIcon(props.icon))
   const isTitle = computed(() => props.title || slot.title)
-  const isOpen = ref(props.open || menu?.open.value)
+  const isOpen = ref(props.open || menu?.props?.open)
 
   function handleChange() {
-    if (!props.title) {
-      menu?.onChange(props.value)
+    if (!props.title && !props.disabled) {
+      menu?.onChange(props.value || '')
     }
   }
   function handleOpen() {
+    if (props.disabled)
+      return
     isOpen.value = !isOpen.value
+  }
+
+  function handleDropdownChange(val: MenuBasicValue) {
+    menu?.onChange(val)
   }
 </script>
 
@@ -40,34 +48,84 @@
     :class="[
       {
         'lt-menuItem--active': isChecked && !isTitle,
+        'lt-menuItem--disabled': disabled,
+        'lt-menuItem--hover': !disabled && (!isTitle || popper),
       },
       isTitle ? 'lt-subMenuItem' : 'lt-menuItem-other',
     ]"
     @click.stop="handleChange"
   >
     <template v-if="isTitle">
-      <div class="lt-subMenuItem-title" @click.stop="handleOpen">
-        <div class="flex items-center w-full">
-          <span v-if="$slots.icon" class="lt-subMenuItem-title-icon"><slot name="icon" /></span>
-          <span v-else-if="isIcon" class="lt-subMenuItem-title-icon" :class="icon" />
+      <Dropdown
+        v-if="popper"
+        class="w-full"
+        :offset="offset || menu?.props?.offset"
+        :disabled="disabled"
+        placement="right-start"
+        @change="handleDropdownChange"
+      >
+        <div
+          class="lt-subMenuItem-title gap-1"
+          :class="[disabled ? 'lt-menuItem--disabled' : 'lt-menuItem--hover']"
+          @click.stop="handleOpen"
+        >
+          <div class="flex items-center w-full">
+            <span v-if="$slots.icon" class="lt-subMenuItem-title-icon"><slot name="icon" /></span>
+            <span v-else-if="isIcon" class="lt-subMenuItem-title-icon" :class="icon" />
+            <slot name="title">
+              {{ title }}
+            </slot>
+          </div>
 
-          <slot name="title">
-            {{ title }}
-          </slot>
+          <div class="flex-center">
+            <slot name="suffix">
+              <span
+                i-heroicons:chevron-down-solid
+                class="text-sm text-gray-400 -rotate-z-90"
+              />
+            </slot>
+          </div>
         </div>
+        <template #content>
+          <ul class="p-0 w-full">
+            <slot />
+          </ul>
+        </template>
+      </Dropdown>
 
-        <div class="flex-center">
-          <IconArrowDown
-            class="w-5 h-5 text-gray-400 transition"
-            :class="{
-              '-rotate-z-90': !isOpen,
-            }"
-          />
+      <template v-else>
+        <div
+          class="lt-subMenuItem-title gap-1"
+          :class="{
+            'lt-menuItem--disabled': disabled,
+          }"
+          @click.stop="handleOpen"
+        >
+          <div class="flex items-center w-full">
+            <span v-if="$slots.icon" class="lt-subMenuItem-title-icon"><slot name="icon" /></span>
+            <span v-else-if="isIcon" class="lt-subMenuItem-title-icon" :class="icon" />
+
+            <slot name="title">
+              {{ title }}
+            </slot>
+          </div>
+
+          <div class="flex-center">
+            <slot name="suffix">
+              <span
+                i-heroicons:chevron-down-solid
+                class="text-sm text-gray-400"
+                :class="{
+                  '-rotate-z-90': popper || !isOpen,
+                }"
+              />
+            </slot>
+          </div>
         </div>
-      </div>
-      <ul v-if="isOpen" class="p-0 w-full">
-        <slot />
-      </ul>
+        <ul v-if="isOpen" class="p-0 w-full">
+          <slot />
+        </ul>
+      </template>
     </template>
     <template v-else>
       <span v-if="isIcon" class="lt-subMenuItem-title-icon" :class="icon" />

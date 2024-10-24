@@ -1,6 +1,6 @@
-import type { TooltipProps } from '@lite-space/tooltip'
+import type { PopoverProps } from '@lite-space/popover'
 
-interface LtPopconfirmProps extends Pick<TooltipProps, 'placement'> {
+interface LtPopconfirmProps extends Pick<PopoverProps, 'placement'> {
   title: string
   description: string
   okText: string

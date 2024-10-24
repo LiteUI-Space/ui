@@ -1,5 +1,3 @@
 export const Popover = {
-  'lt-popover': 'p-1',
-  'lt-popover-title': 'font-600 mb-2 text-sm',
-  'lt-popover-content': 'text-sm'
+  'lt-popover-content': 'text-sm box-border bg-white rounded-md px-2 py-1.5 border border-solid border-gray-200 z-999'
 }

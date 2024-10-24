@@ -31,5 +31,9 @@ declare module 'vue'{
     Popover: typeof import('@lite-space/popover')['Popover']
     Popconfirm: typeof import('@lite-space/popconfirm')['Popconfirm']
     Tooltip: typeof import('@lite-space/tooltip')['Tooltip']
+    Select: typeof import('@lite-space/select')['Select']
+    SelectOption: typeof import('@lite-space/select')['SelectOption']
+    Dropdown: typeof import('@lite-space/dropdown')['Dropdown']
+    DropdownItem: typeof import('@lite-space/dropdown')['DropdownItem']
   }
 }

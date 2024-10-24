@@ -1,6 +1,7 @@
-type MenuBasicValue = string | nulber
+type MenuBasicValue = string | number
 interface LtMenuProps {
   open: boolean
+  offset: number
 }
 
 interface LtMenuItemProps {
@@ -8,6 +9,9 @@ interface LtMenuItemProps {
   title: string
   icon: string
   open: boolean
+  popper: boolean
+  disabled: boolean
+  offset: number
 }
 
 export type MenuProps = Partial<LtMenuProps>

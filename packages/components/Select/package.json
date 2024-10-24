@@ -1,12 +1,12 @@
 {
-  "name": "@lite-space/tooltip",
+  "name": "@lite-space/select",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "keywords": [
     "vue3",
     "component",
     "unocss",
-    "tooltip"
+    "select"
   ],
   "publishConfig": {
     "access": "public",
@@ -26,8 +26,11 @@
     "build": "mkdist -d"
   },
   "dependencies": {
-    "@floating-ui/vue": "^1.1.5",
-    "@lite-space/popover": "workspace:*",
+    "@lite-space/divider": "workspace:*",
+    "@lite-space/dropdown": "workspace:*",
+    "@lite-space/input": "workspace:*",
+    "@lite-space/menu": "workspace:*",
+    "@lite-space/utils": "workspace:*",
     "@vueuse/core": "^10.11.1"
   },
   "devDependencies": {

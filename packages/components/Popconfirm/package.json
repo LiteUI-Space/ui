@@ -1,7 +1,7 @@
 {
   "name": "@lite-space/popconfirm",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "vue3",
     "component",
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@lite-space/button": "workspace:*",
-    "@lite-space/tooltip": "workspace:*"
+    "@lite-space/popover": "workspace:*"
   },
   "devDependencies": {
     "@vue/tsconfig": "^0.5.1",

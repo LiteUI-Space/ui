@@ -2,7 +2,7 @@
   import type { PopconfirmProps } from './types'
 
   import { Button } from '@lite-space/button'
-  import { Tooltip } from '@lite-space/tooltip'
+  import { Popover } from '@lite-space/popover'
 
   defineOptions({
     name: 'LtPopconfirm'
@@ -27,7 +27,7 @@
 <template>
   <slot v-if="disabled" />
 
-  <Tooltip
+  <Popover
     v-else
     v-bind="restProps"
     v-model:open="open"
@@ -69,5 +69,5 @@
         </div>
       </div>
     </template>
-  </Tooltip>
+  </Popover>
 </template>

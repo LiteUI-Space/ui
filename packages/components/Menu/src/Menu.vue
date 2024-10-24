@@ -7,7 +7,9 @@
   defineOptions({
     name: 'LtMenu'
   })
-  const props = defineProps<MenuProps>()
+  const props = withDefaults(defineProps<MenuProps>(), {
+    offset: 8
+  })
 
   const emit = defineEmits<{
     change: [val: MenuBasicValue]
@@ -22,7 +24,7 @@
 
   provide(menuKey, {
     model: toRef(() => modelValue.value),
-    open: toRef(() => props.open),
+    props,
     onChange
   })
 </script>

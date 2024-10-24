@@ -1,9 +1,7 @@
-interface LtTooltipProps {
-  placement: 'top' | 'top-start' | 'top-end' | 'right' | 'right-start' | 'right-end' | 'bottom' | 'bottom-start' | 'bottom-end' | 'left' | 'left-start' | 'left-end'
+import type { PopoverProps } from '@lite-space/popover'
+
+interface LtTooltipProps extends PopoverProps {
   content: string
-  trigger: 'hover' | 'click'
-  offset: number
-  hideDelay: number
 }
 
 export type TooltipProps = Partial<LtTooltipProps>
