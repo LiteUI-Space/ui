@@ -104,6 +104,10 @@ export const toc: Toc[] = [
       {
         title: 'Select 选择器',
         path: '/docs/components/select'
+      },
+      {
+        title: 'Alert 警告提示',
+        path: '/docs/components/alert'
       }
     ]
   }

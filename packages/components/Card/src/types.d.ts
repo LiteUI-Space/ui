@@ -1,4 +1,10 @@
 interface LtCardProps {
+  ui: {
+    base: string
+    header: string
+    body: string
+    footer: string
+  }
   title: string
 }
 

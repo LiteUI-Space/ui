@@ -1,12 +1,12 @@
 {
-  "name": "@lite-space/card",
+  "name": "@lite-space/alert",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.0",
   "keywords": [
     "vue3",
     "component",
     "unocss",
-    "card"
+    "alert"
   ],
   "publishConfig": {
     "access": "public",
@@ -24,6 +24,10 @@
   ],
   "scripts": {
     "build": "mkdist -d"
+  },
+  "dependencies": {
+    "@lite-space/card": "workspace:*",
+    "@lite-space/utils": "workspace:*"
   },
   "devDependencies": {
     "@vue/tsconfig": "^0.5.1",

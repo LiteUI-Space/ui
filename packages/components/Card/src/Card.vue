@@ -19,7 +19,7 @@
             {{ title }}
           </template>
         </div>
-        <div>
+        <div class="lt-card-extra">
           <slot name="extra" />
         </div>
       </template>

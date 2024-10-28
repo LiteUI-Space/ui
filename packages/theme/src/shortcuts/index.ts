@@ -5,6 +5,7 @@ import { Tabs } from './Tabs'
 import { Empty } from './Empty'
 import { Space } from './Space'
 import { Badge } from './Badge'
+import { Alert } from './Alert'
 import { Button } from './Button'
 import { common } from './common'
 import { Switch } from './Switch'
@@ -43,7 +44,8 @@ export const shortcuts = [
   Tooltip,
   Popconfirm,
   Select,
-  Dropdown
+  Dropdown,
+  Alert
 ]
 
 /**
