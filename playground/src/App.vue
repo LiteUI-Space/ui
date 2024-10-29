@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { ref, watch } from 'vue'
-  import { Select, SelectOption } from '@lite-space/ui'
+  import { Select, SelectOption, Slider } from '@lite-space/ui'
 
   import Icon from './components/Icon.vue'
   import SizeBtns from './components/SizeBtns.vue'
@@ -11,6 +11,7 @@
   })
   const selectValue = ref('test2')
   const selectValue1 = ref('test2')
+  const slederValue = ref(150)
 </script>
 
 <template>
@@ -41,33 +42,14 @@
       test3
     </SelectOption>
   </Select>
-<!--
-  <Select v-model="selectValue" clearable placeholder="请选择">
-    <SelectOption value="test1">
-      test1113
-    </SelectOption>
-    <SelectOption value="test2">
-      test2
-    </SelectOption>
-    <SelectOption value="test3">
-      test3
-    </SelectOption>
-  </Select>
-
-  <Select v-model="selectValue" clearable placeholder="请选择">
-    <SelectOption value="test1">
-      <div flex items-center>
-        <span i-heroicons:finger-print-16-solid mr-1 /> <span>test111</span>
-      </div>
-    </SelectOption>
-    <SelectOption disabled value="test2">
-      test2
-    </SelectOption>
-    <SelectOption value="test3">
-      test3
-    </SelectOption>
-    <template #footer>
-      <div>test footer</div>
-    </template>
-  </Select> -->
+  <div w-200px m-auto mb-4>
+    <Slider />
+  </div>
+  <div w-200px m-auto>
+    <Slider
+      v-model="slederValue"
+      :min="50"
+      :max="200"
+    />
+  </div>
 </template>

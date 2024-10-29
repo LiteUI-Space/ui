@@ -7,11 +7,11 @@
     name: 'LtTooltip'
   })
 
-  defineProps<TooltipProps>()
+  const props = defineProps<TooltipProps>()
 </script>
 
 <template>
-  <Popover content-class="lt-tooltip">
+  <Popover v-bind="props" :content-class="['lt-tooltip', contentClass]">
     <slot />
     <template #content>
       <slot name="content">

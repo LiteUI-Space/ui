@@ -1,12 +1,12 @@
 {
-  "name": "@lite-space/tooltip",
+  "name": "@lite-space/slider",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.0",
   "keywords": [
     "vue3",
     "component",
     "unocss",
-    "tooltip"
+    "slider"
   ],
   "publishConfig": {
     "access": "public",
@@ -26,7 +26,8 @@
     "build": "mkdist -d"
   },
   "dependencies": {
-    "@lite-space/popover": "workspace:*"
+    "@lite-space/tooltip": "workspace:*",
+    "@vueuse/core": "^10.11.1"
   },
   "devDependencies": {
     "@vue/tsconfig": "^0.5.1",

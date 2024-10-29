@@ -1,7 +1,7 @@
 {
   "name": "@lite-space/ui",
   "type": "module",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A Vue3 based UnoCSS UI library.",
   "author": "AntzyMo <mozbano@163.com>",
   "license": "MIT",
@@ -47,6 +47,7 @@
     "@lite-space/popover": "workspace:*",
     "@lite-space/radio": "workspace:*",
     "@lite-space/select": "workspace:*",
+    "@lite-space/slider": "workspace:*",
     "@lite-space/space": "workspace:*",
     "@lite-space/switch": "workspace:*",
     "@lite-space/tabs": "workspace:*",

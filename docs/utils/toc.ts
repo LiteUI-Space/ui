@@ -108,6 +108,10 @@ export const toc: Toc[] = [
       {
         title: 'Alert 警告提示',
         path: '/docs/components/alert'
+      },
+      {
+        title: 'Slider 滑动输入条',
+        path: '/docs/components/slider'
       }
     ]
   }

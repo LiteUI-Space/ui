@@ -36,5 +36,6 @@ declare module 'vue'{
     Dropdown: typeof import('@lite-space/dropdown')['Dropdown']
     DropdownItem: typeof import('@lite-space/dropdown')['DropdownItem']
     Alert: typeof import('@lite-space/alert')['Alert']
+    Slider: typeof import('@lite-space/slider')['Slider']
   }
 }

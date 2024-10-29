@@ -10,6 +10,7 @@ import { Button } from './Button'
 import { common } from './common'
 import { Switch } from './Switch'
 import { Select } from './Select'
+import { Slider } from './Slider'
 import { Divider } from './Divider'
 import { Popover } from './Popover'
 import { Tooltip } from './Tooltip'
@@ -45,7 +46,8 @@ export const shortcuts = [
   Popconfirm,
   Select,
   Dropdown,
-  Alert
+  Alert,
+  Slider
 ]
 
 /**
