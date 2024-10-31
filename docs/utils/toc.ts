@@ -112,6 +112,10 @@ export const toc: Toc[] = [
       {
         title: 'Slider 滑动输入条',
         path: '/docs/components/slider'
+      },
+      {
+        title: 'Affix 固钉',
+        path: '/docs/components/affix'
       }
     ]
   }

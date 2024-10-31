@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { ref, watch } from 'vue'
-  import { Select, SelectOption, Slider } from '@lite-space/ui'
+  import { Affix, Button, Select, SelectOption } from '@lite-space/ui'
 
   import Icon from './components/Icon.vue'
   import SizeBtns from './components/SizeBtns.vue'
@@ -11,7 +11,6 @@
   })
   const selectValue = ref('test2')
   const selectValue1 = ref('test2')
-  const slederValue = ref(150)
 </script>
 
 <template>
@@ -42,14 +41,10 @@
       test3
     </SelectOption>
   </Select>
-  <div w-200px m-auto mb-4>
-    <Slider />
-  </div>
-  <div w-200px m-auto>
-    <Slider
-      v-model="slederValue"
-      :min="50"
-      :max="200"
-    />
+  <div ref="div" class="w-50 h-50 bg-gray-200 overflow-hidden overflow-y-auto">
+    <Affix :offset-top="10">
+      <Button>Affix top</Button>
+    </Affix>
+    <div h-100 bg-green />
   </div>
 </template>
