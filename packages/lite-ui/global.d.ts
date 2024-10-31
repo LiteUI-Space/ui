@@ -10,9 +10,6 @@ declare module 'vue'{
     CheckboxGroup: typeof import('@lite-space/checkbox')['CheckboxGroup']
     Divider: typeof import('@lite-space/divider')['Divider']
     Empty: typeof import('@lite-space/empty')['Empty']
-    IconArrowDown: typeof import('@lite-space/icon')['IconArrowDown']
-    IconEmpty: typeof import('@lite-space/icon')['IconEmpty']
-    IconUser: typeof import('@lite-space/icon')['IconUser']
     Input: typeof import('@lite-space/input')['Input']
     InputPassword: typeof import('@lite-space/input')['InputPassword']
     TextArea: typeof import('@lite-space/input')['TextArea']
@@ -37,5 +34,6 @@ declare module 'vue'{
     DropdownItem: typeof import('@lite-space/dropdown')['DropdownItem']
     Alert: typeof import('@lite-space/alert')['Alert']
     Slider: typeof import('@lite-space/slider')['Slider']
+    Affix: typeof import('@lite-space/affix')['Affix']
   }
 }

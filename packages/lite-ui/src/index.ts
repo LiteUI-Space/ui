@@ -1,3 +1,4 @@
+export * from '@lite-space/affix'
 export * from '@lite-space/alert'
 export * from '@lite-space/avatar'
 export * from '@lite-space/badge'

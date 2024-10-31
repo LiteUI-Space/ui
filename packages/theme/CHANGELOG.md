@@ -1,5 +1,14 @@
 # @lite-space/theme
 
+## 0.7.0
+
+### Patch Changes
+
+- @lite-space/affix@0.0.0
+  @lite-space/empty@0.0.4
+  @lite-space/ui@0.7.0
+  @lite-space/theme@0.7.0
+
 ## 0.6.0
 
 ### Patch Changes

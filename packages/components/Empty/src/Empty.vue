@@ -1,8 +1,6 @@
 <script setup lang="ts">
   import type { EmptyProps } from './types'
 
-  import { IconEmpty } from '@lite-space/icon'
-
   defineOptions({
     name: 'LtEmpty'
   })
@@ -19,7 +17,7 @@
         :class="imageClass"
         :src="image"
       >
-      <IconEmpty v-else class="text-gray-200 w-full h-full" />
+      <span v-else i-heroicons:archive-box-x-mark-solid class="inline-block text-gray-200 w-full h-full" />
     </div>
     <div v-if="$slots.description || description" class="lt-empty-description">
       <slot v-if="$slots.description" name="description" />

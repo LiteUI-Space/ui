@@ -1,12 +1,12 @@
 {
-  "name": "@lite-space/empty",
+  "name": "@lite-space/affix",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.0",
   "keywords": [
     "vue3",
     "component",
     "unocss",
-    "empty"
+    "affix"
   ],
   "publishConfig": {
     "access": "public",

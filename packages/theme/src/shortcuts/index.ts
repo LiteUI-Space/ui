@@ -6,6 +6,7 @@ import { Empty } from './Empty'
 import { Space } from './Space'
 import { Badge } from './Badge'
 import { Alert } from './Alert'
+import { Affix } from './Affix'
 import { Button } from './Button'
 import { common } from './common'
 import { Switch } from './Switch'
@@ -47,7 +48,8 @@ export const shortcuts = [
   Select,
   Dropdown,
   Alert,
-  Slider
+  Slider,
+  Affix
 ]
 
 /**
