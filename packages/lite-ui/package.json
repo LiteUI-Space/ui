@@ -1,7 +1,7 @@
 {
   "name": "@lite-space/ui",
   "type": "module",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "A Vue3 based UnoCSS UI library.",
   "author": "AntzyMo <mozbano@163.com>",
   "license": "MIT",
@@ -32,6 +32,7 @@
   "dependencies": {
     "@lite-space/affix": "workspace:*",
     "@lite-space/alert": "workspace:*",
+    "@lite-space/anchor": "workspace:*",
     "@lite-space/avatar": "workspace:*",
     "@lite-space/badge": "workspace:*",
     "@lite-space/breadcrumb": "workspace:*",

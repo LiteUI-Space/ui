@@ -12,6 +12,7 @@ import { common } from './common'
 import { Switch } from './Switch'
 import { Select } from './Select'
 import { Slider } from './Slider'
+import { Anchor } from './Anchor'
 import { Divider } from './Divider'
 import { Popover } from './Popover'
 import { Tooltip } from './Tooltip'
@@ -49,7 +50,8 @@ export const shortcuts = [
   Dropdown,
   Alert,
   Slider,
-  Affix
+  Affix,
+  Anchor
 ]
 
 /**

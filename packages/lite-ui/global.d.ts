@@ -35,5 +35,7 @@ declare module 'vue'{
     Alert: typeof import('@lite-space/alert')['Alert']
     Slider: typeof import('@lite-space/slider')['Slider']
     Affix: typeof import('@lite-space/affix')['Affix']
+    Anchor: typeof import('@lite-space/anchor')['Anchor']
+    AnchorLink: typeof import('@lite-space/anchor')['AnchorLink']
   }
 }

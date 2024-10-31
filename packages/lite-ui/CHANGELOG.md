@@ -1,5 +1,18 @@
 # @lite-space/ui
 
+## 0.8.0
+
+### Minor Changes
+
+- @lite-space/anchor@0.0.0
+  @lite-space/ui@0.8.0
+  @lite-space/theme@0.8.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @lite-space/theme@0.8.0
+
 ## 0.7.0
 
 ### Patch Changes

@@ -116,6 +116,10 @@ export const toc: Toc[] = [
       {
         title: 'Affix 固钉',
         path: '/docs/components/affix'
+      },
+      {
+        title: 'Anchor 锚点',
+        path: '/docs/components/anchor'
       }
     ]
   }
