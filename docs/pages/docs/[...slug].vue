@@ -31,7 +31,7 @@
 </script>
 
 <template>
-  <div flex="~ 1 justify-between" class="gap-10">
+  <div flex="~ 1 justify-between" class="gap-20 mx-45">
     <template v-if="page?.title">
       <aside>
         <Affix :offset-top="92">
