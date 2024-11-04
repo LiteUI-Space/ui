@@ -42,7 +42,7 @@
     },
     `lt-button-${props.size}`,
     props.type && `lt-button--${props.type}`,
-    props.disabled ? `lt-button--${props.type}-disabled` : `lt-button--${props.type}-hover`,
+    props.disabled ? `lt-button--${props.type}-disabled` : `lt-button--${props.danger ? `${props.type}-danger` : props.type}-hover`,
     props.danger && `lt-button--${props.type}-danger`,
     props.icon && !slots.default && `lt-button-${props.size}--onlyicon`
   ])

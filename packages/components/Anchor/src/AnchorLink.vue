@@ -1,15 +1,19 @@
 <script setup lang="ts">
   import type { AnchorLinkProps } from './types'
 
-  import { inject } from 'vue'
+  import { inject, onMounted } from 'vue'
   import { anchorKey } from './constants'
 
   defineOptions({
     name: 'LtAnchorLink'
   })
-
-  defineProps<AnchorLinkProps>()
+  const props = defineProps<AnchorLinkProps>()
   const anchor = inject(anchorKey, undefined)
+  onMounted(() => {
+    if (!props.title && props.href) {
+      anchor?.addLink(props.href)
+    }
+  })
 </script>
 
 <template>

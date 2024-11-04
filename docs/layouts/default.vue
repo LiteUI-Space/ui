@@ -16,7 +16,7 @@
 
 <template>
   <div class="relative min-h-screen" flex="~ col">
-    <header class="sticky top-0 z-50 w-full px-8">
+    <header class="sticky top-0 z-999 w-full px-8 bg-white mb-8" border-b="~ solid gray-200">
       <div class="h-14 max-w-screen-2xl mx-auto" flex="~ items-center">
         <nav>
           <Space :size="24">
@@ -49,7 +49,7 @@
       </div>
     </header>
 
-    <div class="flex-1 mx-5xl">
+    <div class="flex-1 mx-5xl mb-4">
       <slot />
     </div>
 

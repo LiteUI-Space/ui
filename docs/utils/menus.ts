@@ -1,14 +1,14 @@
-interface TocChildren {
+interface MenusChildren {
   title: string
   path: string
 }
 
-interface Toc {
+interface Menus {
   title: string
-  children: TocChildren[]
+  children: MenusChildren[]
 }
 
-export const toc: Toc[] = [
+export const menus: Menus[] = [
   {
     title: 'Getting Started',
     children: [

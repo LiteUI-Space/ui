@@ -14,7 +14,7 @@ description: 通用卡片容器
 </script>
 
 <template>
-  <Card title="Default size card">
+  <Card class="w-200px" title="Default size card">
     <template #extra>
       <span>More</span>
     </template>
@@ -35,7 +35,7 @@ description: 通用卡片容器
 </script>
 
 <template>
-  <Card>
+  <Card class="w-200px">
     <p>Card content</p>
     <p>Card content</p>
     <p>Card content</p>

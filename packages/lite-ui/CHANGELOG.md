@@ -1,5 +1,15 @@
 # @lite-space/ui
 
+## 0.8.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @lite-space/anchor@0.0.1
+  - @lite-space/button@0.0.3
+  - @lite-space/theme@0.8.1
+  - @lite-space/popconfirm@0.0.3
+
 ## 0.8.0
 
 ### Minor Changes

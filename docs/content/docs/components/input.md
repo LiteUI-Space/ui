@@ -106,7 +106,7 @@ description: 通过鼠标或键盘输入内容，是最基础的表单域的包�
 
 ```vue
 <script setup lang="ts">
-  import { Button, InputPassword } from '@lite-space/ui'
+  import { Button, InputPassword, Space } from '@lite-space/ui'
 
   const visible = ref(true)
   function handleChange(data: boolean) {
@@ -115,17 +115,19 @@ description: 通过鼠标或键盘输入内容，是最基础的表单域的包�
 </script>
 
 <template>
-  <InputPassword
-    v-model:visible="visible"
-    @change="handleChange"
-  >
-    <template #suffix>
-      <span>123</span>
-    </template>
-  </InputPassword>
-  <Button type="primary" @click="visible = !visible">
-    {{ visible }}
-  </Button>
+  <Space>
+    <InputPassword
+      v-model:visible="visible"
+      @change="handleChange"
+    >
+      <template #suffix>
+        <span>123</span>
+      </template>
+    </InputPassword>
+    <Button type="primary" @click="visible = !visible">
+      {{ visible }}
+    </Button>
+  </Space>
 </template>
 ```
 ::

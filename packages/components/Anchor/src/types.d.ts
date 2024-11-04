@@ -1,5 +1,4 @@
 interface LtAnchorProps {
-
 }
 
 interface LtAnchorLinkProps {

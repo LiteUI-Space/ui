@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <Card>
+  <Card class="w-200px">
     <p>Card content</p>
     <p>Card content</p>
     <p>Card content</p>

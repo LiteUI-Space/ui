@@ -11,29 +11,39 @@
   const route = useRoute()
   const { data: page, error } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
   const url = useRequestURL()
+
+  const mainRef = useTemplateRef('main')
+  const toc = ref<Record<'text' | 'value', string>[]>([])
+  onMounted(() => {
+    const elementsWithIds = mainRef.value!.querySelectorAll('[id]')
+    toc.value = [...elementsWithIds].map(item => ({
+      text: item.textContent!,
+      value: item.id
+    }))
+  })
+
+  const sortedMenus = menus.map(item => {
+    if (item.title === 'Components') {
+      item.children = item.children.sort((a, b) => a.title.localeCompare(b.title))
+    }
+    return item
+  })
 </script>
 
 <template>
-  <div flex="~" class="gap-10">
+  <div flex="~ 1 justify-between" class="gap-10">
     <template v-if="page?.title">
       <aside>
-        <Affix :offset-top="56">
+        <Affix :offset-top="92">
           <Menu :model-value="url.pathname" open @change="path => $router.push(path)">
-            <MenuItem v-for="item in toc" :key="item.title" :value="item.title">
+            <MenuItem v-for="item in sortedMenus" :key="item.title" :value="item.title">
               <template #title>
                 <h3 class="text-sm font-bold">
                   {{ item.title }}
                 </h3>
               </template>
-              <MenuItem
-                v-for="it in item.children"
-                :key="it.path"
-                :value="it.path"
-              >
-                <NuxtLink
-                  :to="it.path"
-                  class="w-full hover:text-gray-800 text-sm text-gray-600"
-                >
+              <MenuItem v-for="it in item.children" :key="it.path" :value="it.path">
+                <NuxtLink :to="it.path" class="w-full hover:text-gray-800 text-sm text-gray-600">
                   {{ it.title }}
                 </NuxtLink>
               </MenuItem>
@@ -41,29 +51,18 @@
           </Menu>
         </Affix>
       </aside>
-      <main class="relative">
-        <Breadcrumb class="" :items="['Docs', page.title]" separator="i-carbon:chevron-right" />
+      <main ref="main" class="relative flex-1">
+        <Breadcrumb :items="['Docs', page.title]" separator="i-carbon:chevron-right" />
         <ContentRenderer :value="page" />
       </main>
       <aside>
-        <Affix :offset-top="56">
+        <Affix :offset-top="92">
           <h2 class="text-sm font-bold text-gray-800 mb-2">
             On This Page
           </h2>
           <Anchor>
-            <AnchorLink href="test1">
-              test1
-            </AnchorLink>
-            <AnchorLink title="test2" href="test2">
-              <AnchorLink href="test4">
-                test4
-              </AnchorLink>
-              <AnchorLink href="test5">
-                test5
-              </AnchorLink>
-            </AnchorLink>
-            <AnchorLink href="test3">
-              test3
+            <AnchorLink v-for="item in toc" :key="item.value" :href="item.value">
+              {{ item.text }}
             </AnchorLink>
           </Anchor>
         </Affix>

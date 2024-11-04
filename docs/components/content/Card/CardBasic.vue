@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <Card title="Default size card">
+  <Card class="w-200px" title="Default size card">
     <template #extra>
       <span>More</span>
     </template>

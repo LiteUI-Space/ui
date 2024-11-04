@@ -14,6 +14,8 @@ export const Button = {
   'lt-button--text-hover': 'hover:bg-gray-100/80',
   'lt-button--primary-hover': 'hover:op-90',
   'lt-button--link-hover': 'hover:text-gray-900/80',
+  'lt-button--link-danger-hover': 'lt-button--primary-hover',
+
   // button disabled
   'lt-button--disabled': 'cursor-not-allowed! op-80%',
   // button danger
