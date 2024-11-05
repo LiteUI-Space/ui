@@ -3,18 +3,17 @@ title: Installation
 description: 本节将介绍如何在项目中使用 lite-space/ui。
 ---
 
-# 快速开始
+## 快速开始
 
-首先你需要安装`unocss`和`@lite-space/ui`
-
+::CodeView
 ```shell
-pnpm add unocss -D
-pnpm add @lite-space/ui
-pnpm add @lite-space/theme
+pnpm add @lite-space/ui @lite-space/theme
+pnpm add unocss @iconify-json/heroicons -D
 ```
+::
 
-然后在`unocss.config`里配置
-
+接着在`unocss.config`里配置`presetLite`
+::CodeView
 ```ts
 import { presetLite } from '@lite-space/theme'
 export default defineConfig({
@@ -25,6 +24,8 @@ export default defineConfig({
   ]
 })
 ```
+::
+
 接着就可以使用了
 ```vue
 <script setup lang="ts">

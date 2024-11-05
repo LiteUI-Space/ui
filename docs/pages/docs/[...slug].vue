@@ -10,7 +10,7 @@
 
   const route = useRoute()
   const { data: page, error } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
-  const url = useRequestURL()
+  const isComponentsDoc = route.path.includes('components')
 
   const mainRef = useTemplateRef('main')
   const toc = ref<Record<'text' | 'value', string>[]>([])
@@ -35,7 +35,7 @@
     <template v-if="page?.title">
       <aside>
         <Affix :offset-top="92">
-          <Menu :model-value="url.pathname" open @change="path => $router.push(path)">
+          <Menu :model-value="route.path" open @change="path => $router.push(path)">
             <MenuItem v-for="item in sortedMenus" :key="item.title" :value="item.title">
               <template #title>
                 <h3 class="text-sm font-bold">
@@ -51,7 +51,7 @@
           </Menu>
         </Affix>
       </aside>
-      <main ref="main" class="relative flex-1">
+      <main ref="main" class="prose relative flex-1" :class="{ main: !isComponentsDoc }">
         <Breadcrumb :items="['Docs', page.title]" separator="i-carbon:chevron-right" />
         <ContentRenderer :value="page" />
       </main>
@@ -73,3 +73,22 @@
     </div>
   </div>
 </template>
+
+<style lang="postcss">
+.prose.main {
+  h2 {
+    @apply text-lg font-bold mb-2 cursor-pointer my-3;
+
+    a{
+      @apply no-underline font-bold;
+    }
+
+  }
+  p{
+    @apply my-0 text-sm;
+  }
+  pre{
+    @apply bg-gray-50 px-2.5 py-2 border border-1 border-gray-100 rounded-md;
+  }
+}
+</style>

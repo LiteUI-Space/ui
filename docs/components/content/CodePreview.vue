@@ -19,16 +19,8 @@
   const isVisibleCode = ref(false)
   const visibleCodeContent = computed(() => isVisibleCode.value ? '收起代码' : '显示代码')
 
-  const { copy, copied } = useClipboard()
-
   const codeRef = useTemplateRef('code')
-
-  const { start, ready } = useTimeout(1500, { controls: true })
-  const copyContent = computed(() => copied.value ? '复制成功' : '复制代码')
-  function hanldeCopy() {
-    copy(codeRef.value?.textContent || '')
-    start()
-  }
+  const { handleCopy, copyResult, iconCopy } = useCopyCode(codeRef)
 
   function handleHash(href: string) {
     location.hash = href
@@ -55,9 +47,8 @@
       <div class="text-sm">
         <Divider :margin="12" />
         <div class="flex-center gap-2" :class="{ 'mb-2': isVisibleCode }">
-          <Tooltip :content="copyContent">
-            <ReuseTemplate v-if="copied && !ready" icon="i-heroicons:check-16-solid" />
-            <ReuseTemplate v-else icon="i-heroicons:clipboard-document" @click="hanldeCopy" />
+          <Tooltip :content="copyResult">
+            <ReuseTemplate :icon="iconCopy" @click="handleCopy" />
           </Tooltip>
           <Tooltip :content="visibleCodeContent">
             <ReuseTemplate v-if="isVisibleCode" icon="i-heroicons:code-bracket-16-solid" @click="isVisibleCode = false" />

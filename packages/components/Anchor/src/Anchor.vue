@@ -25,12 +25,6 @@
   const links: string[] = []
   function onChange(val: string) {
     model.value = val
-    scrollTo(val)
-  }
-
-  function scrollTo(href: string) {
-    if (!href)
-      return
   }
 
   function handleScroll() {
@@ -41,7 +35,7 @@
     }))
 
     els.forEach((el, index) => {
-      if (scrollTop >= el.offsetTop && scrollTop <= els[index + 1].offsetTop) {
+      if (scrollTop >= el.offsetTop && (scrollTop <= els[index + 1]?.offsetTop || true)) {
         model.value = el.href
       }
     })
@@ -73,7 +67,6 @@
   provide(anchorKey, {
     model: computed(() => model.value),
     onChange,
-    scrollTo,
     addLink: link => links.push(link)
   })
 </script>

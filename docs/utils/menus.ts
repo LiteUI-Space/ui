@@ -13,11 +13,11 @@ export const menus: Menus[] = [
     title: 'Getting Started',
     children: [
       {
-        title: 'Introduction',
+        title: '介绍',
         path: '/docs'
       },
       {
-        title: 'Installation',
+        title: '快速开始',
         path: '/docs/installation'
       }
     ]
