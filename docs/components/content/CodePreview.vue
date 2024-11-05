@@ -20,7 +20,8 @@
   const visibleCodeContent = computed(() => isVisibleCode.value ? '收起代码' : '显示代码')
 
   const codeRef = useTemplateRef('code')
-  const { handleCopy, copyResult, iconCopy } = useCopyCode(codeRef)
+  const { handleCopy, copyResult, isCopied } = useCopyCode(codeRef)
+  const iconCopy = computed(() => isCopied.value ? 'i-heroicons:check-16-solid' : 'i-heroicons:clipboard-document')
 
   function handleHash(href: string) {
     location.hash = href

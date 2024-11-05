@@ -1,6 +1,7 @@
 <script setup lang="ts">
   const codeRef = useTemplateRef('code')
-  const { handleCopy, iconCopy } = useCopyCode(codeRef)
+  const { handleCopy, isCopied } = useCopyCode(codeRef)
+  const iconCopy = computed(() => isCopied.value ? 'i-heroicons:check-16-solid' : 'i-heroicons:clipboard-document')
 </script>
 
 <template>
