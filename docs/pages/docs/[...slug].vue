@@ -51,7 +51,7 @@
           </Menu>
         </Affix>
       </aside>
-      <main ref="main" class="prose relative flex-1" :class="{ main: !isComponentsDoc }">
+      <main ref="main" class="relative flex-1" :class="{ 'prose main': !isComponentsDoc }">
         <Breadcrumb :items="['Docs', page.title]" separator="i-carbon:chevron-right" />
         <ContentRenderer :value="page" />
       </main>
